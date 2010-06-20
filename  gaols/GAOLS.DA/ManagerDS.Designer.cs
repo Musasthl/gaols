@@ -264,7 +264,11 @@ namespace GAOLS.DA {
             
             private global::System.Data.DataColumn columnItemNumber;
             
-            private global::System.Data.DataColumn columnQuantityInStock;
+            private global::System.Data.DataColumn columnDescription;
+            
+            private global::System.Data.DataColumn columnQuantity;
+            
+            private global::System.Data.DataColumn columnPrice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public ShoppingCartDataTable() {
@@ -304,9 +308,23 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn QuantityInStockColumn {
+            public global::System.Data.DataColumn DescriptionColumn {
                 get {
-                    return this.columnQuantityInStock;
+                    return this.columnDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QuantityColumn {
+                get {
+                    return this.columnQuantity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PriceColumn {
+                get {
+                    return this.columnPrice;
                 }
             }
             
@@ -339,11 +357,13 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ShoppingCartRow AddShoppingCartRow(string ItemNumber, string QuantityInStock) {
+            public ShoppingCartRow AddShoppingCartRow(int ItemNumber, string Description, decimal Quantity, decimal Price) {
                 ShoppingCartRow rowShoppingCartRow = ((ShoppingCartRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ItemNumber,
-                        QuantityInStock};
+                        Description,
+                        Quantity,
+                        Price};
                 rowShoppingCartRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowShoppingCartRow);
                 return rowShoppingCartRow;
@@ -364,15 +384,21 @@ namespace GAOLS.DA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
                 this.columnItemNumber = base.Columns["ItemNumber"];
-                this.columnQuantityInStock = base.Columns["QuantityInStock"];
+                this.columnDescription = base.Columns["Description"];
+                this.columnQuantity = base.Columns["Quantity"];
+                this.columnPrice = base.Columns["Price"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnItemNumber = new global::System.Data.DataColumn("ItemNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnItemNumber = new global::System.Data.DataColumn("ItemNumber", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItemNumber);
-                this.columnQuantityInStock = new global::System.Data.DataColumn("QuantityInStock", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQuantityInStock);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescription);
+                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuantity);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrice);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,10 +531,10 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string ItemNumber {
+            public int ItemNumber {
                 get {
                     try {
-                        return ((string)(this[this.tableShoppingCart.ItemNumberColumn]));
+                        return ((int)(this[this.tableShoppingCart.ItemNumberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ItemNumber\' in table \'ShoppingCart\' is DBNull.", e);
@@ -520,17 +546,47 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string QuantityInStock {
+            public string Description {
                 get {
                     try {
-                        return ((string)(this[this.tableShoppingCart.QuantityInStockColumn]));
+                        return ((string)(this[this.tableShoppingCart.DescriptionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'QuantityInStock\' in table \'ShoppingCart\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'ShoppingCart\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableShoppingCart.QuantityInStockColumn] = value;
+                    this[this.tableShoppingCart.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal Quantity {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableShoppingCart.QuantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Quantity\' in table \'ShoppingCart\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableShoppingCart.QuantityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal Price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableShoppingCart.PriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'ShoppingCart\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableShoppingCart.PriceColumn] = value;
                 }
             }
             
@@ -545,13 +601,33 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsQuantityInStockNull() {
-                return this.IsNull(this.tableShoppingCart.QuantityInStockColumn);
+            public bool IsDescriptionNull() {
+                return this.IsNull(this.tableShoppingCart.DescriptionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetQuantityInStockNull() {
-                this[this.tableShoppingCart.QuantityInStockColumn] = global::System.Convert.DBNull;
+            public void SetDescriptionNull() {
+                this[this.tableShoppingCart.DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQuantityNull() {
+                return this.IsNull(this.tableShoppingCart.QuantityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQuantityNull() {
+                this[this.tableShoppingCart.QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPriceNull() {
+                return this.IsNull(this.tableShoppingCart.PriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPriceNull() {
+                this[this.tableShoppingCart.PriceColumn] = global::System.Convert.DBNull;
             }
         }
         
