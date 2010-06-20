@@ -10,11 +10,6 @@
     <ItemTemplate>
         <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Picture") %>' />
         <br />
-        ItemNumber:
-        <asp:Label ID="ItemNumberLabel" runat="server" 
-            Text='<%# Eval("ItemNumber") %>' />
-        <br />
-        Description:
         <asp:Label ID="DescriptionLabel" runat="server" 
             Text='<%# Eval("Description") %>' />
         <br />
@@ -23,8 +18,12 @@
         <br />
         Price:
         <asp:Label ID="PriceLabel" runat="server" 
-            Text='<%# Eval("Price", "{0:N}") %>' />
+            Text='<%# Eval("Price") %>' />
         <br />
+        SubtTotal:
+        <asp:Label ID="SubtTotalLabel" runat="server" Text='<%# Eval("SubtTotal") %>' />
+        <br />
+        <asp:Button ID="btnRemove" runat="server" Text="Remove Item" />
         <br />
     </ItemTemplate>
 </asp:DataList>
