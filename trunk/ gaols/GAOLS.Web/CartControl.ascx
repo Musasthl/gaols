@@ -8,6 +8,8 @@
     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
     <ItemTemplate>
+        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Picture") %>' />
+        <br />
         ItemNumber:
         <asp:Label ID="ItemNumberLabel" runat="server" 
             Text='<%# Eval("ItemNumber") %>' />
@@ -20,10 +22,8 @@
         <asp:Label ID="QuantityLabel" runat="server" Text='<%# Eval("Quantity") %>' />
         <br />
         Price:
-        <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price") %>' />
-        <br />
-        Picture:
-        <asp:Label ID="PictureLabel" runat="server" Text='<%# Eval("Picture") %>' />
+        <asp:Label ID="PriceLabel" runat="server" 
+            Text='<%# Eval("Price", "{0:N}") %>' />
         <br />
         <br />
     </ItemTemplate>
