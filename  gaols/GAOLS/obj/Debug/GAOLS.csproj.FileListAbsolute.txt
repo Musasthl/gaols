@@ -1,0 +1,9 @@
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS\bin\Debug\GAOLS.exe
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS\bin\Debug\GAOLS.pdb
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS\obj\Debug\GAOLS.Properties.Resources.resources
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS\obj\Debug\GAOLS.csproj.GenerateResource.Cache
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS\obj\Debug\GAOLS.exe
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS\obj\Debug\GAOLS.pdb
+D:\GAOLS\GAOLS\obj\Debug\GAOLS.exe
+D:\GAOLS\GAOLS\obj\Debug\GAOLS.pdb

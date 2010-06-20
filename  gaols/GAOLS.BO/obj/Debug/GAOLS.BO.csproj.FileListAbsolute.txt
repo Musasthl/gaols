@@ -1,0 +1,5 @@
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.BO\bin\Debug\GAOLS.BO.dll
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.BO\bin\Debug\GAOLS.BO.pdb
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.BO\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.BO\obj\Debug\GAOLS.BO.dll
+C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.BO\obj\Debug\GAOLS.BO.pdb
