@@ -270,6 +270,8 @@ namespace GAOLS.DA {
             
             private global::System.Data.DataColumn columnPrice;
             
+            private global::System.Data.DataColumn columnPicture;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public ShoppingCartDataTable() {
                 this.TableName = "ShoppingCart";
@@ -329,6 +331,13 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PictureColumn {
+                get {
+                    return this.columnPicture;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -357,13 +366,14 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ShoppingCartRow AddShoppingCartRow(int ItemNumber, string Description, decimal Quantity, decimal Price) {
+            public ShoppingCartRow AddShoppingCartRow(int ItemNumber, string Description, decimal Quantity, decimal Price, string Picture) {
                 ShoppingCartRow rowShoppingCartRow = ((ShoppingCartRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ItemNumber,
                         Description,
                         Quantity,
-                        Price};
+                        Price,
+                        Picture};
                 rowShoppingCartRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowShoppingCartRow);
                 return rowShoppingCartRow;
@@ -387,6 +397,7 @@ namespace GAOLS.DA {
                 this.columnDescription = base.Columns["Description"];
                 this.columnQuantity = base.Columns["Quantity"];
                 this.columnPrice = base.Columns["Price"];
+                this.columnPicture = base.Columns["Picture"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -399,6 +410,8 @@ namespace GAOLS.DA {
                 base.Columns.Add(this.columnQuantity);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
+                this.columnPicture = new global::System.Data.DataColumn("Picture", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPicture);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -591,6 +604,21 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Picture {
+                get {
+                    try {
+                        return ((string)(this[this.tableShoppingCart.PictureColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Picture\' in table \'ShoppingCart\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableShoppingCart.PictureColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsItemNumberNull() {
                 return this.IsNull(this.tableShoppingCart.ItemNumberColumn);
             }
@@ -628,6 +656,16 @@ namespace GAOLS.DA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetPriceNull() {
                 this[this.tableShoppingCart.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPictureNull() {
+                return this.IsNull(this.tableShoppingCart.PictureColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPictureNull() {
+                this[this.tableShoppingCart.PictureColumn] = global::System.Convert.DBNull;
             }
         }
         
