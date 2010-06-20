@@ -20,14 +20,12 @@ namespace GAOLS.DA
             _dateCreated = DateTime.Now;
         }
 
-        public void Insert(int ProductID, decimal Price,
-        decimal Quantity, string ProductName, string ImageUrl)
+        public void Insert(int ProductID, decimal Price, decimal Quantity, string ProductName, string ImageUrl)
         {
             int ItemIndex = ItemIndexOfID(ProductID);
             if (ItemIndex == -1)
             {
-                object o = new object();
-                ManagerDS.ShoppingCartRow NewItem = o as ManagerDS.ShoppingCartRow;
+                ManagerDS.ShoppingCartRow NewItem = (new object()) as ManagerDS.ShoppingCartRow;
 
                 NewItem.ItemNumber = ProductID;
                 NewItem.Quantity = Quantity;
@@ -42,8 +40,7 @@ namespace GAOLS.DA
             _lastUpdate = DateTime.Now;
         }
 
-        public void Update(int RowID, int ProductID,
-                         int Quantity, decimal Price)
+        public void Update(int RowID, int ProductID, int Quantity, decimal Price)
         {
             DataRow row = _cartTable.Rows[RowID];
             ManagerDS.ShoppingCartRow Item = row as ManagerDS.ShoppingCartRow;
@@ -68,8 +65,10 @@ namespace GAOLS.DA
                 {
                     return index;
                 }
+
                 index += 1;
             }
+
             return -1;
         }
 

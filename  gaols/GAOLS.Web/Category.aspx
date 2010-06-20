@@ -1,18 +1,21 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="Category.aspx.cs" Inherits="Category" Title="Untitled Page" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:DataList ID="DataList1" runat="server" CellPadding="4" 
     DataSourceID="SqlDataSource1" Font-Bold="False" Font-Italic="False" 
     Font-Overline="False" Font-Strikeout="False" Font-Underline="False" 
     ForeColor="#333333" HorizontalAlign="Center" RepeatColumns="3" 
     RepeatDirection="Horizontal">
-    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
+            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+            Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" />
     <AlternatingItemStyle BackColor="White" />
     <ItemStyle BackColor="#EFF3FB" />
     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
+            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+            Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" />
     <ItemTemplate>
         Picture:
         <asp:Label ID="PictureLabel" runat="server" Text='<%# Eval("Picture") %>' />

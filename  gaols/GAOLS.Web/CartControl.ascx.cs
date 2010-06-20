@@ -17,4 +17,8 @@ public partial class CartControl : System.Web.UI.UserControl
     {
 
     }
+    protected void btnRemove_Click(object sender, EventArgs e)
+    {
+
+    }
 }
