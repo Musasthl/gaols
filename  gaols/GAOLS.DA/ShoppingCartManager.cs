@@ -35,7 +35,7 @@ namespace GAOLS.DA
             }
             else
             {
-                //_cartTable.Rows[ItemIndex]. += 1;
+                (_cartTable.Rows[ItemIndex] as ManagerDS.ShoppingCartRow).Quantity += 1;
             }
             _lastUpdate = DateTime.Now;
         }
