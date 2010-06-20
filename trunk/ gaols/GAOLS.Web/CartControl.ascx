@@ -23,7 +23,8 @@
         SubtTotal:
         <asp:Label ID="SubtTotalLabel" runat="server" Text='<%# Eval("SubtTotal") %>' />
         <br />
-        <asp:Button ID="btnRemove" runat="server" Text="Remove Item" />
+        <asp:Button ID="btnRemove" runat="server" onclick="btnRemove_Click" 
+            Text="Remove Item" />
         <br />
     </ItemTemplate>
 </asp:DataList>
