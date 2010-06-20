@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressTypes.cs" />
-    <Compile Include="CartItem.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerAddresses.cs" />
     <Compile Include="CustomerOrders.cs" />

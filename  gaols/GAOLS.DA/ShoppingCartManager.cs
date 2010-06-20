@@ -20,13 +20,13 @@ namespace GAOLS.DA
             _dateCreated = DateTime.Now;
         }
 
-        public void Insert(int ProductID, double Price,
-        int Quantity, string ProductName, string ImageUrl)
+        public void Insert(int ProductID, decimal Price,
+        decimal Quantity, string ProductName, string ImageUrl)
         {
             int ItemIndex = ItemIndexOfID(ProductID);
             if (ItemIndex == -1)
             {
-                CartItem NewItem = new CartItem();
+                ManagerDS.ShoppingCartRow NewItem = new ManagerDS.ShoppingCartRow();
                 NewItem.ItemNumber = ProductID;
                 NewItem.Quantity = Quantity;
                 NewItem.Price = Price;
