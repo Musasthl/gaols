@@ -45,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManagerDS.cs">
+      <DependentUpon>ManagerDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ShoppingCartManager.cs" />
     <Compile Include="CustomerManager.cs" />
     <Compile Include="ItemManager.cs" />

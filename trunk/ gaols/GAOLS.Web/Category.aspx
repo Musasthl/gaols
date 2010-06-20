@@ -24,16 +24,13 @@
         UnitPrice:
         <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' />
         <br />
+        <asp:Button ID="btnAdd" runat="server" Text="Add to Cart" />
         <br />
     </ItemTemplate>
 </asp:DataList>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
     ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString %>" 
-    SelectCommand="SELECT [Picture], [Description], [UnitPrice] FROM [Inventory] WHERE ([Category] = @Category)">
-    <SelectParameters>
-        <asp:QueryStringParameter Name="Category" QueryStringField="categ" 
-            Type="String" />
-    </SelectParameters>
+    SelectCommand="SELECT * FROM [Inventory]">
 </asp:SqlDataSource>
 </asp:Content>
 
