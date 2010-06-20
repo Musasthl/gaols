@@ -3,3 +3,8 @@ C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.Con\bin\Debug\G
 C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.Con\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.Con\obj\Debug\GAOLS.Con.dll
 C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.Con\obj\Debug\GAOLS.Con.pdb
+D:\GAOLS\GAOLS.Con\bin\Debug\GAOLS.Con.dll
+D:\GAOLS\GAOLS.Con\bin\Debug\GAOLS.Con.pdb
+D:\GAOLS\GAOLS.Con\obj\Debug\ResolveAssemblyReference.cache
+D:\GAOLS\GAOLS.Con\obj\Debug\GAOLS.Con.dll
+D:\GAOLS\GAOLS.Con\obj\Debug\GAOLS.Con.pdb

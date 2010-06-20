@@ -7,3 +7,12 @@ C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.DA\bin\Debug\GA
 C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.DA\bin\Debug\GAOLS.BO.pdb
 C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.DA\bin\Debug\GAOLS.Con.dll
 C:\Users\Magno\Documents\Visual Studio 2008\Projects\GAOLS\GAOLS.DA\bin\Debug\GAOLS.Con.pdb
+D:\GAOLS\GAOLS.DA\bin\Debug\GAOLS.DA.dll
+D:\GAOLS\GAOLS.DA\bin\Debug\GAOLS.DA.pdb
+D:\GAOLS\GAOLS.DA\bin\Debug\GAOLS.BO.dll
+D:\GAOLS\GAOLS.DA\bin\Debug\GAOLS.Con.dll
+D:\GAOLS\GAOLS.DA\bin\Debug\GAOLS.BO.pdb
+D:\GAOLS\GAOLS.DA\bin\Debug\GAOLS.Con.pdb
+D:\GAOLS\GAOLS.DA\obj\Debug\ResolveAssemblyReference.cache
+D:\GAOLS\GAOLS.DA\obj\Debug\GAOLS.DA.dll
+D:\GAOLS\GAOLS.DA\obj\Debug\GAOLS.DA.pdb
