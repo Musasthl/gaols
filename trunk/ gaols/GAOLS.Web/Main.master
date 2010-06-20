@@ -1,5 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
 
+<%@ Register src="BannerControl.ascx" tagname="BannerControl" tagprefix="uc1" %>
+<%@ Register src="CartControl.ascx" tagname="CartControl" tagprefix="uc2" %>
+<%@ Register src="CategoryControl.ascx" tagname="CategoryControl" tagprefix="uc3" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,18 +18,21 @@
         <table style="width: 100%;">
             <tr>
                 <td colspan="3">
-                    &nbsp;</td>
+                    <uc1:BannerControl ID="BannerControl1" runat="server" />
+                </td>
             </tr>
             <tr>
                 <td>
-                    &nbsp;</td>
+                    <uc3:CategoryControl ID="CategoryControl1" runat="server" />
+                </td>
                 <td>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
                 </td>
                 <td>
-                    &nbsp;</td>
+                    <uc2:CartControl ID="CartControl1" runat="server" />
+                </td>
             </tr>
             <tr>
                 <td colspan="3">
