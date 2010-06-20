@@ -26,12 +26,13 @@ namespace GAOLS.DA
             int ItemIndex = ItemIndexOfID(ProductID);
             if (ItemIndex == -1)
             {
-                ////DataSet set = new DataSet();
-                ////ManagerDS.ShoppingCartRow = 
-                //NewItem.ItemNumber = ProductID;
-                //NewItem.Quantity = Quantity;
-                //NewItem.Price = Price;
-                //NewItem.Description = ProductName;
+                object o = new object();
+                ManagerDS.ShoppingCartRow NewItem = o as ManagerDS.ShoppingCartRow;
+
+                NewItem.ItemNumber = ProductID;
+                NewItem.Quantity = Quantity;
+                NewItem.Price = Price;
+                NewItem.Description = ProductName;
                 _cartTable.Rows.Add();
             }
             else
