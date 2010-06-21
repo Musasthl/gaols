@@ -15,22 +15,23 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <table align="center">
+        <table align="center" 
+            style="vertical-align: super; table-layout: fixed; overflow: scroll; clip: rect(auto, auto, auto, auto);">
             <tr>
-                <td colspan="3">
+                <td colspan="3" align="center">
                     <uc1:BannerControl ID="BannerControl1" runat="server" />
                 </td>
             </tr>
             <tr>
-                <td>
+                <td align="right" valign="top">
                     <uc3:CategoryControl ID="CategoryControl1" runat="server" />
                 </td>
-                <td>
+                <td valign=top>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
                 </td>
-                <td>
+                <td valign="top">
                     <uc2:CartControl ID="CartControl1" runat="server" />
                 </td>
             </tr>

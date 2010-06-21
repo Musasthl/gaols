@@ -63,10 +63,10 @@ public partial class CartControl : System.Web.UI.UserControl
     }
     protected void DataList1_UpdateCommand(object source, DataListCommandEventArgs e)
     {
-        Label itemLabel = e.Item.FindControl("Label1") as System.Web.UI.WebControls.Label;
-        TextBox qtyText = e.Item.FindControl("Text1") as System.Web.UI.WebControls.TextBox;
-        TextBox priceText = e.Item.FindControl("Text2") as System.Web.UI.WebControls.TextBox;
-
+        Label itemLabel = e.Item.FindControl("lblDescription2") as System.Web.UI.WebControls.Label;
+        TextBox qtyText = e.Item.FindControl("txtQuantity") as System.Web.UI.WebControls.TextBox;
+        Label priceText = e.Item.FindControl("lblPrice") as System.Web.UI.WebControls.Label;
+        
         string item = itemLabel.Text;
         string qty = qtyText.Text;
         string price = priceText.Text;
@@ -85,5 +85,9 @@ public partial class CartControl : System.Web.UI.UserControl
 
         DataList1.EditItemIndex = -1;
         BindList();
+    }
+    protected void DataList1_DeleteCommand(object source, DataListCommandEventArgs e)
+    {
+        
     }
 }

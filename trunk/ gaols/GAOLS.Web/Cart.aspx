@@ -17,7 +17,13 @@
                 SortExpression="SubtTotal" />
         </Columns>
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerTemplate>
+            Cart
+        </PagerTemplate>
         <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <EmptyDataTemplate>
+            There are no items in your cart.
+        </EmptyDataTemplate>
         <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
         <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <EditRowStyle BackColor="#2461BF" />

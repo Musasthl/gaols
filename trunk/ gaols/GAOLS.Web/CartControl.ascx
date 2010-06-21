@@ -2,7 +2,8 @@
 <asp:DataList ID="DataList1" runat="server" CellPadding="4" ForeColor="#333333" 
     oncancelcommand="DataList1_CancelCommand" 
     oneditcommand="DataList1_EditCommand1" 
-    onupdatecommand="DataList1_UpdateCommand">
+    onupdatecommand="DataList1_UpdateCommand" Width="200px" 
+    ondeletecommand="DataList1_DeleteCommand">
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
     <AlternatingItemStyle BackColor="White" />
     <ItemStyle BackColor="#EFF3FB" />
@@ -12,32 +13,41 @@
         Items
     </HeaderTemplate>
     <ItemTemplate>
-        <asp:Label ID="Label1" runat="server"></asp:Label>
+        <asp:Image ID="Image1" runat="server" Height="79px" Width="85px" />
+        <br />
+        <asp:Label ID="lblDescription1" runat="server"></asp:Label>
         <%#DataBinder.Eval(Container.DataItem,"Description") %>
+        <br>
+        Price:
+        <asp:Label id="lblPrice" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Price") %>' />
         <br>
         Quantity:
         <asp:Label id="lblQuantity" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Quantity")  %>' />
         <br>
-        xPrice:
-        <asp:Label id="lblPrice" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Price") %>' />
-        <br>
-        =Subtotal:
+        Subtotal:
         <asp:Label id="lblSubTotal" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "SubTotal") %>' />
+        <br />
+        <asp:LinkButton ID="button1" runat="server" CommandName="edit" Text="Edit" />
+        <asp:LinkButton ID="LinkButton1" runat="server" CommandName="delete" Text="Remove" />
         <br>
-        <asp:LinkButton id="button1" runat="server" Text="Edit" CommandName="edit" />
-    </ItemTemplate>
+        
+        </ItemTemplate>
     <EditItemTemplate>
                 Item:
-                <asp:Label id="Label1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Description")  %>' />
-                <br>
-                Quantity:
-                <asp:TextBox id="Text1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Quantity")  %>' />
+                <asp:Label id="lblDescription2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Description")  %>' />
                 <br>
                 Price:
-                <asp:TextBox id="Text2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Price") %>' />
+                <asp:Label id="lblPrice" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Price") %>' />
                 <br>
-                <asp:LinkButton id="button2" runat="server" Text="Update" CommandName="update" />
-                <asp:LinkButton id="button3" runat="server" Text="Cancel" CommandName="cancel" />
+                Quantity:
+                <asp:TextBox ID="txtQuantity" runat="server" 
+                    Text='<%# DataBinder.Eval(Container.DataItem, "Quantity")  %>' />
+                <br>
+                <asp:LinkButton ID="button2" runat="server" CommandName="update" 
+                    Text="Update" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="button3" runat="server" CommandName="cancel" 
+                    Text="Cancel" />
                 </EditItemTemplate>
 </asp:DataList>
 
