@@ -272,7 +272,7 @@ namespace GAOLS.DA {
             
             private global::System.Data.DataColumn columnImageUrl;
             
-            private global::System.Data.DataColumn columnSubtTotal;
+            private global::System.Data.DataColumn columnSubTotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public ShoppingCartDataTable() {
@@ -340,9 +340,9 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn SubtTotalColumn {
+            public global::System.Data.DataColumn SubTotalColumn {
                 get {
-                    return this.columnSubtTotal;
+                    return this.columnSubTotal;
                 }
             }
             
@@ -375,7 +375,7 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ShoppingCartRow AddShoppingCartRow(int ItemNumber, string Description, decimal Quantity, decimal Price, string ImageUrl, decimal SubtTotal) {
+            public ShoppingCartRow AddShoppingCartRow(int ItemNumber, string Description, decimal Quantity, decimal Price, string ImageUrl, decimal SubTotal) {
                 ShoppingCartRow rowShoppingCartRow = ((ShoppingCartRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ItemNumber,
@@ -383,7 +383,7 @@ namespace GAOLS.DA {
                         Quantity,
                         Price,
                         ImageUrl,
-                        SubtTotal};
+                        SubTotal};
                 rowShoppingCartRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowShoppingCartRow);
                 return rowShoppingCartRow;
@@ -408,7 +408,7 @@ namespace GAOLS.DA {
                 this.columnQuantity = base.Columns["Quantity"];
                 this.columnPrice = base.Columns["Price"];
                 this.columnImageUrl = base.Columns["ImageUrl"];
-                this.columnSubtTotal = base.Columns["SubtTotal"];
+                this.columnSubTotal = base.Columns["SubTotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -423,8 +423,8 @@ namespace GAOLS.DA {
                 base.Columns.Add(this.columnPrice);
                 this.columnImageUrl = new global::System.Data.DataColumn("ImageUrl", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImageUrl);
-                this.columnSubtTotal = new global::System.Data.DataColumn("SubtTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSubtTotal);
+                this.columnSubTotal = new global::System.Data.DataColumn("SubTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubTotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -632,17 +632,17 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public decimal SubtTotal {
+            public decimal SubTotal {
                 get {
                     try {
-                        return ((decimal)(this[this.tableShoppingCart.SubtTotalColumn]));
+                        return ((decimal)(this[this.tableShoppingCart.SubTotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SubtTotal\' in table \'ShoppingCart\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubTotal\' in table \'ShoppingCart\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableShoppingCart.SubtTotalColumn] = value;
+                    this[this.tableShoppingCart.SubTotalColumn] = value;
                 }
             }
             
@@ -697,13 +697,13 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsSubtTotalNull() {
-                return this.IsNull(this.tableShoppingCart.SubtTotalColumn);
+            public bool IsSubTotalNull() {
+                return this.IsNull(this.tableShoppingCart.SubTotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetSubtTotalNull() {
-                this[this.tableShoppingCart.SubtTotalColumn] = global::System.Convert.DBNull;
+            public void SetSubTotalNull() {
+                this[this.tableShoppingCart.SubTotalColumn] = global::System.Convert.DBNull;
             }
         }
         

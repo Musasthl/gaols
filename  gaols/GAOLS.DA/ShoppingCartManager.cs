@@ -31,7 +31,7 @@ namespace GAOLS.DA
                 NewItem.Quantity = Quantity;
                 NewItem.Price = Price;
                 NewItem.Description = Description;
-                NewItem.SubtTotal = NewItem.Quantity * NewItem.Price;
+                NewItem.SubTotal = NewItem.Quantity * NewItem.Price;
                 _cartTable.Rows.Add(NewItem);
             }
             else

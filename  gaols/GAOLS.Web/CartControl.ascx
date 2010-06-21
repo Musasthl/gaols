@@ -12,9 +12,19 @@
         Items
     </HeaderTemplate>
     <ItemTemplate>
-        <asp:LinkButton id="button1" runat="server" Text="Edit" CommandName="edit" />
-        &nbsp;<asp:Label ID="Label1" runat="server"></asp:Label>
+        <asp:Label ID="Label1" runat="server"></asp:Label>
         <%#DataBinder.Eval(Container.DataItem,"Description") %>
+        <br>
+        Quantity:
+        <asp:Label id="lblQuantity" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Quantity")  %>' />
+        <br>
+        xPrice:
+        <asp:Label id="lblPrice" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Price") %>' />
+        <br>
+        =Subtotal:
+        <asp:Label id="lblSubTotal" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "SubTotal") %>' />
+        <br>
+        <asp:LinkButton id="button1" runat="server" Text="Edit" CommandName="edit" />
     </ItemTemplate>
     <EditItemTemplate>
                 Item:
