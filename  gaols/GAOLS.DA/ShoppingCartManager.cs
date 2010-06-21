@@ -20,18 +20,19 @@ namespace GAOLS.DA
             _dateCreated = DateTime.Now;
         }
 
-        public void Insert(int ProductID, decimal Price, decimal Quantity, string ProductName, string ImageUrl)
+        public void Insert(int ItemNumber, decimal Price, decimal Quantity, string Description, string ImageUrl)
         {
-            int ItemIndex = ItemIndexOfID(ProductID);
+            int ItemIndex = ItemIndexOfID(ItemNumber);
             if (ItemIndex == -1)
             {
-                ManagerDS.ShoppingCartRow NewItem = (new object()) as ManagerDS.ShoppingCartRow;
+                ManagerDS.ShoppingCartRow NewItem = _cartTable.NewRow() as ManagerDS.ShoppingCartRow;
 
-                NewItem.ItemNumber = ProductID;
+                NewItem.ItemNumber = ItemNumber;
                 NewItem.Quantity = Quantity;
                 NewItem.Price = Price;
-                NewItem.Description = ProductName;
-                _cartTable.Rows.Add();
+                NewItem.Description = Description;
+                NewItem.SubtTotal = NewItem.Quantity * NewItem.Price;
+                _cartTable.Rows.Add(NewItem);
             }
             else
             {

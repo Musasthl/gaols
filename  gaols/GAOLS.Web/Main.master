@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <table style="width: 100%;">
+        <table align="center">
             <tr>
                 <td colspan="3">
                     <uc1:BannerControl ID="BannerControl1" runat="server" />
