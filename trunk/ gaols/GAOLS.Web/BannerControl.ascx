@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1">
+<head>
     <title></title>
     
     <link href="~css/ui-lightness/jquery-ui-1.7.3.custom.css" rel="stylesheet" 
@@ -10,7 +10,8 @@
         type="text/css" />
         
 </head>
-<body></body>
+<body>
+</body>
 </html>
 
 
@@ -33,7 +34,7 @@
 </style>
 <table class="style1">
     <tr>
-        <td colspan="3" class="style2">
+        
         <div id="WebBanner">
             
             <div class="current">
@@ -50,7 +51,7 @@
             
             
             </div>
-        </td>
+        
     </tr>
     <tr>
         <td colspan="2" class="style2">
