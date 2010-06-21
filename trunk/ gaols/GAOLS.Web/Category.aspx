@@ -6,7 +6,7 @@
     DataSourceID="SqlDataSource1" Font-Bold="False" Font-Italic="False" 
     Font-Overline="False" Font-Strikeout="False" Font-Underline="False" 
     ForeColor="#333333" HorizontalAlign="Center" RepeatColumns="3" 
-    RepeatDirection="Horizontal" Width="400px">
+    RepeatDirection="Horizontal" Width="209px">
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
             Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" />

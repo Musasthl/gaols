@@ -1,16 +1,18 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CartControl.ascx.cs" Inherits="CartControl" %>
 <asp:DataList ID="DataList1" runat="server" CellPadding="4" ForeColor="#333333" 
     oncancelcommand="DataList1_CancelCommand" 
-    oneditcommand="DataList1_EditCommand1" 
+    oneditcommand="DataList1_EditCommand" 
     onupdatecommand="DataList1_UpdateCommand" Width="200px" 
     ondeletecommand="DataList1_DeleteCommand">
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
     <AlternatingItemStyle BackColor="White" />
     <ItemStyle BackColor="#EFF3FB" />
     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
+        Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+        Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" />
     <HeaderTemplate>
-        Items
+        Cart
     </HeaderTemplate>
     <ItemTemplate>
         <asp:Image ID="Image1" runat="server" Height="79px" Width="85px" />

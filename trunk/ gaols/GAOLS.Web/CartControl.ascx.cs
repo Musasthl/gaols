@@ -23,8 +23,6 @@ public partial class CartControl : System.Web.UI.UserControl
         {
             scm = new ShoppingCartManager();
             Session["cart"] = scm;
-            scm.Insert(1, 1, 2, "item1", "");
-            scm.Insert(3, 2, 1, "item2", "");
         }
         else
             scm = Session["cart"] as ShoppingCartManager;
@@ -43,51 +41,44 @@ public partial class CartControl : System.Web.UI.UserControl
         DataList1.DataBind();
     }
 
-    protected void btnRemove_Click(object sender, EventArgs e)
-    {
-
-    }
     protected void DataList1_EditCommand(object source, DataListCommandEventArgs e)
     {
-        
+        if (CartView.Table.Rows.Count > e.Item.ItemIndex)
+            DataList1.EditItemIndex = e.Item.ItemIndex;
+        BindList();        
     }
-    protected void DataList1_EditCommand1(object source, DataListCommandEventArgs e)
-    {
-        DataList1.EditItemIndex = e.Item.ItemIndex;
-        BindList();
-    }
+   
     protected void DataList1_CancelCommand(object source, DataListCommandEventArgs e)
     {
         DataList1.EditItemIndex = -1;
         BindList();
     }
+
     protected void DataList1_UpdateCommand(object source, DataListCommandEventArgs e)
     {
         Label itemLabel = e.Item.FindControl("lblDescription2") as System.Web.UI.WebControls.Label;
         TextBox qtyText = e.Item.FindControl("txtQuantity") as System.Web.UI.WebControls.TextBox;
         Label priceText = e.Item.FindControl("lblPrice") as System.Web.UI.WebControls.Label;
-        
+
         string item = itemLabel.Text;
         string qty = qtyText.Text;
         string price = priceText.Text;
 
-        foreach (DataRow row in CartView.Table.Rows)
-        {
-            if (row["Description"].ToString() == item)
-            {
-                ManagerDS.ShoppingCartRow dr = row as ManagerDS.ShoppingCartRow;
-                dr.Quantity = decimal.Parse(qty);
-                dr.Description = item;
-                dr.Price = decimal.Parse(price);
-                dr.SubTotal = dr.Price * dr.Quantity;
-            }
-        }
+
+        ManagerDS.ShoppingCartRow dr = CartView.Table.Rows[e.Item.ItemIndex] as ManagerDS.ShoppingCartRow;
+        dr.Quantity = decimal.Parse(qty);
+        dr.Description = item;
+        dr.Price = decimal.Parse(price);
+        dr.SubTotal = dr.Price * dr.Quantity;
 
         DataList1.EditItemIndex = -1;
         BindList();
     }
     protected void DataList1_DeleteCommand(object source, DataListCommandEventArgs e)
     {
-        
+        if (CartView.Table.Rows.Count > e.Item.ItemIndex)
+            CartView.Table.Rows.RemoveAt(e.Item.ItemIndex);
+     
+        BindList();
     }
 }
