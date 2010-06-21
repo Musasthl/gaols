@@ -17,7 +17,8 @@
             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
         </td>
         <td>
-            &nbsp;</td>
+            <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx">Cart</asp:LinkButton>
+        </td>
         <td>
             &nbsp;</td>
     </tr>

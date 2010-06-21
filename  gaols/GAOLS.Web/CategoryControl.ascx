@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CategoryControl.ascx.cs" Inherits="CategoryControl" %>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                 DataSourceID="SqlDataSource1" CellPadding="4" 
-    ForeColor="#333333" GridLines="None">
+    ForeColor="#333333" GridLines="None" Width="200px">
                 <RowStyle BackColor="#EFF3FB" />
                 <Columns>
                     <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
@@ -14,6 +14,6 @@
                 <AlternatingRowStyle BackColor="White" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
+                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString %>" 
                 SelectCommand="SELECT [Name] FROM [Category]"></asp:SqlDataSource>
         
