@@ -17,6 +17,6 @@
                 <AlternatingRowStyle BackColor="White" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString %>" 
+                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
                 SelectCommand="SELECT [Name] FROM [Category]"></asp:SqlDataSource>
         
