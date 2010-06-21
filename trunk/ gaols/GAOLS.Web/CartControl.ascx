@@ -2,7 +2,7 @@
 <asp:DataList ID="DataList1" runat="server" CellPadding="4" ForeColor="#333333" 
     oncancelcommand="DataList1_CancelCommand" 
     oneditcommand="DataList1_EditCommand" 
-    onupdatecommand="DataList1_UpdateCommand" Width="200px" 
+    onupdatecommand="DataList1_UpdateCommand" Width="200px" GridLines="Both" 
     ondeletecommand="DataList1_DeleteCommand">
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
     <AlternatingItemStyle BackColor="White" />

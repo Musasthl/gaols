@@ -21,7 +21,7 @@
     <form id="form1" runat="server">
     <div>
         <table align="center" 
-            style="vertical-align: super; table-layout: fixed; overflow: scroll; clip: rect(auto, auto, auto, auto);">
+            style="table-layout: fixed; clip: rect(auto, auto, auto, auto);">
             <tr>
                 <td colspan="3" align="center">
                     <uc1:BannerControl ID="BannerControl1" runat="server" />
