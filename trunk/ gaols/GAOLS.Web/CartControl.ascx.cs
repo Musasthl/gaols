@@ -70,5 +70,20 @@ public partial class CartControl : System.Web.UI.UserControl
         string item = itemLabel.Text;
         string qty = qtyText.Text;
         string price = priceText.Text;
+
+        foreach (DataRow row in CartView.Table.Rows)
+        {
+            if (row["Description"].ToString() == item)
+            {
+                ManagerDS.ShoppingCartRow dr = row as ManagerDS.ShoppingCartRow;
+                dr.Quantity = decimal.Parse(qty);
+                dr.Description = item;
+                dr.Price = decimal.Parse(price);
+                dr.SubTotal = dr.Price * dr.Quantity;
+            }
+        }
+
+        DataList1.EditItemIndex = -1;
+        BindList();
     }
 }
