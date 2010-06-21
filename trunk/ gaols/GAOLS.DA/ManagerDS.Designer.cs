@@ -270,7 +270,7 @@ namespace GAOLS.DA {
             
             private global::System.Data.DataColumn columnPrice;
             
-            private global::System.Data.DataColumn columnPicture;
+            private global::System.Data.DataColumn columnImageUrl;
             
             private global::System.Data.DataColumn columnSubtTotal;
             
@@ -333,9 +333,9 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn PictureColumn {
+            public global::System.Data.DataColumn ImageUrlColumn {
                 get {
-                    return this.columnPicture;
+                    return this.columnImageUrl;
                 }
             }
             
@@ -375,14 +375,14 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ShoppingCartRow AddShoppingCartRow(int ItemNumber, string Description, decimal Quantity, decimal Price, string Picture, decimal SubtTotal) {
+            public ShoppingCartRow AddShoppingCartRow(int ItemNumber, string Description, decimal Quantity, decimal Price, string ImageUrl, decimal SubtTotal) {
                 ShoppingCartRow rowShoppingCartRow = ((ShoppingCartRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ItemNumber,
                         Description,
                         Quantity,
                         Price,
-                        Picture,
+                        ImageUrl,
                         SubtTotal};
                 rowShoppingCartRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowShoppingCartRow);
@@ -407,7 +407,7 @@ namespace GAOLS.DA {
                 this.columnDescription = base.Columns["Description"];
                 this.columnQuantity = base.Columns["Quantity"];
                 this.columnPrice = base.Columns["Price"];
-                this.columnPicture = base.Columns["Picture"];
+                this.columnImageUrl = base.Columns["ImageUrl"];
                 this.columnSubtTotal = base.Columns["SubtTotal"];
             }
             
@@ -421,8 +421,8 @@ namespace GAOLS.DA {
                 base.Columns.Add(this.columnQuantity);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
-                this.columnPicture = new global::System.Data.DataColumn("Picture", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPicture);
+                this.columnImageUrl = new global::System.Data.DataColumn("ImageUrl", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImageUrl);
                 this.columnSubtTotal = new global::System.Data.DataColumn("SubtTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSubtTotal);
             }
@@ -617,17 +617,17 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Picture {
+            public string ImageUrl {
                 get {
                     try {
-                        return ((string)(this[this.tableShoppingCart.PictureColumn]));
+                        return ((string)(this[this.tableShoppingCart.ImageUrlColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Picture\' in table \'ShoppingCart\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ImageUrl\' in table \'ShoppingCart\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableShoppingCart.PictureColumn] = value;
+                    this[this.tableShoppingCart.ImageUrlColumn] = value;
                 }
             }
             
@@ -687,13 +687,13 @@ namespace GAOLS.DA {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsPictureNull() {
-                return this.IsNull(this.tableShoppingCart.PictureColumn);
+            public bool IsImageUrlNull() {
+                return this.IsNull(this.tableShoppingCart.ImageUrlColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetPictureNull() {
-                this[this.tableShoppingCart.PictureColumn] = global::System.Convert.DBNull;
+            public void SetImageUrlNull() {
+                this[this.tableShoppingCart.ImageUrlColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -7,5 +7,6 @@ namespace GAOLS.DA
 {
     public class ItemManager
     {
+        
     }
 }
