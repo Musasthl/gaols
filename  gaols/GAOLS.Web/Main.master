@@ -13,7 +13,7 @@
     </asp:ContentPlaceHolder>
     <link href="~css/ui-lightness/jquery-ui-1.7.3.custom.css" rel="stylesheet" 
         type="text/css" />
-    <link href="~css/ui-lightness/jquery-ui-1.7.3.custom.css" rel="stylesheet" 
+    <link href="~css/main.css" rel="stylesheet" 
         type="text/css" />
         
 </head>

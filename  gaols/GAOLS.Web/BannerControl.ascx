@@ -1,4 +1,20 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BannerControl.ascx.cs" Inherits="BannerControl" %>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <title></title>
+    
+    <link href="~css/ui-lightness/jquery-ui-1.7.3.custom.css" rel="stylesheet" 
+        type="text/css" />
+    <link href="~css/main.css" rel="stylesheet" 
+        type="text/css" />
+        
+
+</html>
+
+
+
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BannerControl.ascx.cs" Inherits="BannerControl" %>
 <style type="text/css">
     .style1
     {
@@ -18,9 +34,21 @@
     <tr>
         <td colspan="3" class="style2">
         <div id="WebBanner">
-            <asp:Image ID="Image1" runat="server" ImageUrl="~/images/web1.png" />
-            <asp:Image ID="Image2" runat="server" ImageUrl="~/images/web2.png" />
-        </div>
+            
+            <div class="current">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Untitled-1 copy.jpg" />
+            </div>
+            
+            <div>
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/images/Untitled-2 copy.jpg" />
+            </div>
+            
+            <div>
+            <asp:Image ID="Image3" runat="server" ImageUrl="~/images/Untitled-3 copy.jpg" />
+            </div>
+            
+            
+            </div>
         </td>
     </tr>
     <tr>
