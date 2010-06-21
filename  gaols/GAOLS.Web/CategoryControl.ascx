@@ -4,7 +4,10 @@
     ForeColor="#333333" GridLines="None" Width="200px">
                 <RowStyle BackColor="#EFF3FB" />
                 <Columns>
-                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" >
+                        <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                    </asp:BoundField>
                 </Columns>
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
