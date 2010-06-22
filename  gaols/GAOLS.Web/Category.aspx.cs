@@ -13,16 +13,14 @@ using System.Xml.Linq;
 
 public partial class Category : System.Web.UI.Page
 {
-    private static string name;
-
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.QueryString["categ_name"] != null)
-            name = Request.QueryString["categ_name"].ToString();
+        if (IsPostBack)
+            Response.Redirect(Request.Url.ToString());
     }
 
-    public string GetCategoryName()
+    public static string GetCategoryName(string name)
     {
-        return "";
+        return name.Replace('+', ' ');
     }
 }

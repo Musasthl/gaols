@@ -64,8 +64,12 @@
         </td>
         <td align="right" class="style2">
             <asp:Label ID="Label1" runat="server" Text="Category"></asp:Label>
-            <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:DropDownList ID="DropDownList1" runat="server" 
+                DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId">
             </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString %>" 
+                SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="Search" />
         </td>

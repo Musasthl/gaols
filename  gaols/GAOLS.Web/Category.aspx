@@ -2,19 +2,28 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:DataList ID="DataList1" runat="server" CellPadding="4" 
+    <asp:DataList ID="DataList1" runat="server" CellPadding="1" 
     DataSourceID="SqlDataSource1" Font-Bold="False" Font-Italic="False" 
     Font-Overline="False" Font-Strikeout="False" Font-Underline="False" 
     ForeColor="#333333" HorizontalAlign="Center" RepeatColumns="3" 
-    RepeatDirection="Horizontal" Width="300px" GridLines="Both">
+    RepeatDirection="Horizontal" Width="300px" GridLines="Both" ShowFooter="False">
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
             Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" />
-    <AlternatingItemStyle BackColor="White" />
-    <ItemStyle BackColor="#EFF3FB" />
-    <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        <EditItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+            Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" 
+            VerticalAlign="Middle" />
+    <AlternatingItemStyle BackColor="White" Font-Bold="False" Font-Italic="False" 
+            Font-Overline="False" Font-Strikeout="False" Font-Underline="False" 
+            HorizontalAlign="Center" VerticalAlign="Middle" />
+    <ItemStyle BackColor="#EFF3FB" Font-Bold="False" Font-Italic="False" 
+            Font-Overline="False" Font-Strikeout="False" Font-Underline="False" 
+            HorizontalAlign="Center" VerticalAlign="Middle" />
+    <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" 
+            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+            Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" />
     <HeaderTemplate>
-        <asp:Label ID="lblCategory" runat="server" Text='<%# Request.QueryString["categ_id"] %>'></asp:Label>
+        <asp:Label ID="lblCategory" runat="server" Text='<%# GetCategoryName(Request.QueryString["name"]) %>'></asp:Label>
     </HeaderTemplate>
     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
@@ -26,14 +35,13 @@
         <asp:Label ID="DescriptionLabel" runat="server" 
             Text='<%# Eval("Description") %>' />
         <br />
-        <asp:Label ID="DetailsLabel" runat="server" Text='<%# Eval("Details") %>' />
-        <br />
         UnitPrice:
         <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' />
         <br />
-        Category:
-        <asp:Label ID="CategoryLabel" runat="server" Text='<%# Eval("Category") %>' />
         <br />
+        <asp:LinkButton ID="LinkButton1" runat="server">View</asp:LinkButton>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:LinkButton ID="LinkButton2" runat="server">Add to Cart</asp:LinkButton>
         <br />
     </ItemTemplate>
 </asp:DataList>

@@ -8,8 +8,8 @@
                     <asp:BoundField DataField="CategoryId" HeaderText="CategoryId" ReadOnly="True" 
                         SortExpression="CategoryId" Visible="False" />
                     <asp:HyperLinkField DataTextField="Name" HeaderText="Categories" 
-                        SortExpression="Name" DataNavigateUrlFields="CategoryId" 
-                        DataNavigateUrlFormatString="Category.aspx?categ_id={0}">
+                        SortExpression="Name" DataNavigateUrlFields="CategoryId,Name" 
+                        DataNavigateUrlFormatString="Category.aspx?categ_id={0}&name={1}">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:HyperLinkField>
                 </Columns>
