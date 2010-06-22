@@ -21,15 +21,11 @@
     .style1
     {
         width: 100%;
-        height: 92px;
+        height: 14px;
     }
-    .style2
+    .style4
     {
-        height: 65px;
-    }
-    .style3
-    {
-        height: 19px;
+        width: 624px;
     }
 </style>
 <table class="style1">
@@ -54,17 +50,24 @@
         
     </tr>
     <tr>
-        <td colspan="1">
-            &nbsp;</td>
-        <td>
+        <td colspan="1" class="style4">
+            </td>
+        <td align="right">
             <asp:LoginStatus ID="LoginStatus1" runat="server" />
         </td>
     </tr>
     <tr>
-        <td align="center" colspan="2">
+        <td align="left">
             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
         &nbsp;
             <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx">Cart</asp:LinkButton>
+        </td>
+        <td align="right" class="style2">
+            <asp:Label ID="Label1" runat="server" Text="Category"></asp:Label>
+            <asp:DropDownList ID="DropDownList1" runat="server">
+            </asp:DropDownList>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" Text="Search" />
         </td>
     </tr>
 </table>

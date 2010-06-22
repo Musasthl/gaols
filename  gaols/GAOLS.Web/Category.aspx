@@ -22,14 +22,11 @@
             Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" 
         Wrap="False" />
     <ItemTemplate>
-        Picture:
-        <asp:Label ID="PictureLabel" runat="server" Text='<%# Eval("Picture") %>' />
+        <asp:Image ID="Image1" runat="server" Height="191px" Width="128px" />
         <br />
-        Description:
         <asp:Label ID="DescriptionLabel" runat="server" 
             Text='<%# Eval("Description") %>' />
         <br />
-        Details:
         <asp:Label ID="DetailsLabel" runat="server" Text='<%# Eval("Details") %>' />
         <br />
         UnitPrice:
@@ -44,7 +41,9 @@
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
     ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString %>" 
     
-    SelectCommand="SELECT [Picture], [Description], [Details], [UnitPrice], [Category] FROM [Inventory] WHERE ([Category] = @Category)">
+    
+        SelectCommand="SELECT [Picture], [Description], [Details], [UnitPrice], [Category] FROM [Inventory] WHERE ([Category] = @Category)" 
+        ProviderName="<%$ ConnectionStrings:GAOLSConnectionString.ProviderName %>">
     <SelectParameters>
         <asp:QueryStringParameter Name="Category" QueryStringField="categ_id" 
             Type="String" />
