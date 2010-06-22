@@ -14,8 +14,7 @@
     <ItemStyle BackColor="#EFF3FB" />
     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
     <HeaderTemplate>
-        <asp:Label ID="lblCategory" runat="server" Text='<%# GetCategoryName() %>'></asp:Label>
-        &nbsp;Category
+        <asp:Label ID="lblCategory" runat="server" Text='<%# Request.QueryString["categ_id"] %>'></asp:Label>
     </HeaderTemplate>
     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
