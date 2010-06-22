@@ -15,13 +15,11 @@ public partial class Category : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string category = Request.QueryString["categ_id"];
+        
+    }
 
-        if (category != "" || category != null)
-        {
-            //Label lblCategory = DataList1.;
-
-            //lblCategory.Text = category;
-        }
+    public static string GetCategoryName()
+    {
+        return Request.QueryString["categ_id"].ToString();
     }
 }

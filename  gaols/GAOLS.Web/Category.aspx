@@ -14,7 +14,7 @@
     <ItemStyle BackColor="#EFF3FB" />
     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
     <HeaderTemplate>
-        <asp:Label ID="lblCategory" runat="server" Text='<%# Eval("categ_id") %>'></asp:Label>
+        <asp:Label ID="lblCategory" runat="server" Text='<%# GetCategoryName() %>'></asp:Label>
         &nbsp;Category
     </HeaderTemplate>
     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
@@ -22,7 +22,7 @@
             Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" 
         Wrap="False" />
     <ItemTemplate>
-        <asp:Image ID="Image1" runat="server" Height="191px" Width="128px" />
+        <asp:Image ID="Image1" runat="server" Height="130px" Width="130px" />
         <br />
         <asp:Label ID="DescriptionLabel" runat="server" 
             Text='<%# Eval("Description") %>' />
