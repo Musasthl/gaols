@@ -27,11 +27,6 @@ public partial class CartControl : System.Web.UI.UserControl
         else
         {
             scm = Session["cart"] as ShoppingCartManager;
-
-            if (scm._cartTable.Rows.Count > 0)
-            {
-                
-            }
         }
 
         CartView = new DataView(scm.GetCart());

@@ -13,13 +13,16 @@ using System.Xml.Linq;
 
 public partial class Category : System.Web.UI.Page
 {
+    private static string name;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        if (Request.QueryString["categ_name"] != null)
+            name = Request.QueryString["categ_name"].ToString();
     }
 
-    public static string GetCategoryName()
+    public string GetCategoryName()
     {
-        return Request.QueryString["categ_id"].ToString();
+        return "";
     }
 }

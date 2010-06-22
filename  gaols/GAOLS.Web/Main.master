@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
 
-
+<%@ Register src="~/BannerControl.ascx" tagname="BannerControl" tagprefix="uc1" %>
 <%@ Register src="CartControl.ascx" tagname="CartControl" tagprefix="uc2" %>
 <%@ Register src="CategoryControl.ascx" tagname="CategoryControl" tagprefix="uc3" %>
 
