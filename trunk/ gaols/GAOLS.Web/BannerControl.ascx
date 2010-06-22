@@ -54,20 +54,17 @@
         
     </tr>
     <tr>
-        <td colspan="2" class="style2">
+        <td colspan="1">
             &nbsp;</td>
-        <td class="style3">
+        <td>
             <asp:LoginStatus ID="LoginStatus1" runat="server" />
         </td>
     </tr>
     <tr>
-        <td class="style3">
+        <td align="center" colspan="2">
             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
-        </td>
-        <td class="style3">
+        &nbsp;
             <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx">Cart</asp:LinkButton>
         </td>
-        <td class="style3">
-            &nbsp;</td>
     </tr>
 </table>
