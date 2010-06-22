@@ -31,7 +31,7 @@
                 <td align="right" valign="top">
                     <uc3:CategoryControl ID="CategoryControl1" runat="server" />
                 </td>
-                <td valign=top>
+                <td valign="top" width="400" align="center">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>

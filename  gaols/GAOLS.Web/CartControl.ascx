@@ -14,6 +14,9 @@
     <HeaderTemplate>
         Cart
     </HeaderTemplate>
+    <FooterTemplate>
+        <asp:Button ID="Button4" runat="server" Text="Check Out" />
+    </FooterTemplate>
     <ItemTemplate>
         <asp:Image ID="Image1" runat="server" Height="79px" Width="85px" />
         <br />
