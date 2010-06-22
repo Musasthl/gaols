@@ -16,6 +16,7 @@ public partial class CartControl : System.Web.UI.UserControl
 {
     private ShoppingCartManager scm;
     private DataView CartView;
+    private static bool _enableCheckOut;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -35,6 +36,8 @@ public partial class CartControl : System.Web.UI.UserControl
         {
             BindList();
         }
+
+        _enableCheckOut = scm._cartTable.Rows.Count > 0;
     }
 
     void BindList()
@@ -80,7 +83,13 @@ public partial class CartControl : System.Web.UI.UserControl
     {
         if (CartView.Table.Rows.Count > e.Item.ItemIndex)
             CartView.Table.Rows.RemoveAt(e.Item.ItemIndex);
-     
+
+        
         BindList();
+    }
+
+    public static bool EnableCheckOut()
+    {
+        return _enableCheckOut;
     }
 }
