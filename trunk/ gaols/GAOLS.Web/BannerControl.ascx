@@ -163,9 +163,10 @@ $(document).ready(function() {
                 DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId">
             </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
+                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString3 %>" 
                 SelectCommand="SELECT * FROM [Category]" 
-                ProviderName="<%$ ConnectionStrings:GAOLSConnectionString.ProviderName %>"></asp:SqlDataSource>
+                
+                ProviderName="<%$ ConnectionStrings:GAOLSConnectionString3.ProviderName %>"></asp:SqlDataSource>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Search" />
         </td>
     </tr>

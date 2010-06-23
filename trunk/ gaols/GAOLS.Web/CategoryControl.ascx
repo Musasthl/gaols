@@ -10,6 +10,7 @@
                     <asp:HyperLinkField DataTextField="Name" HeaderText="Categories" 
                         SortExpression="Name" DataNavigateUrlFields="CategoryId,Name" 
                         DataNavigateUrlFormatString="Category.aspx?categ_id={0}&name={1}">
+                        <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:HyperLinkField>
                 </Columns>
@@ -21,8 +22,9 @@
                 <AlternatingRowStyle BackColor="White" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="Data Source=MIYANGOTPC\MSSQLSERVER2008;Initial Catalog=GAOLS;Integrated Security=True" 
+                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString3 %>" 
                 SelectCommand="SELECT * FROM [Category]" 
     
-    ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
+    
+    ProviderName="<%$ ConnectionStrings:GAOLSConnectionString3.ProviderName %>"></asp:SqlDataSource>
         
