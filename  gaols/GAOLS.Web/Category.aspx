@@ -45,12 +45,13 @@
     </ItemTemplate>
 </asp:DataList>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-    ConnectionString="Data Source=MIYANGOTPC\MSSQLSERVER2008;Initial Catalog=GAOLS;Integrated Security=True" 
+    ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
     
     
         SelectCommand="SELECT ItemNumber, QuantityInStock, Description, UnitPrice, Details, Picture, Category FROM Inventory WHERE (Category = @Category)" 
         
-        ProviderName="System.Data.SqlClient">
+        
+        ProviderName="<%$ ConnectionStrings:GAOLSConnectionString2.ProviderName %>">
     <SelectParameters>
         <asp:QueryStringParameter Name="Category" QueryStringField="categ_id" 
             Type="String" />
