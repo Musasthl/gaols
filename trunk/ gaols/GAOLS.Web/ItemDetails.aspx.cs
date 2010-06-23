@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using GAOLS.DA;
 
 public partial class Item : System.Web.UI.Page
 {
@@ -17,5 +18,19 @@ public partial class Item : System.Web.UI.Page
     {
         
     }
-    
+
+    protected void btnAddToCart_Click(object sender, EventArgs e)
+    {
+        ShoppingCartManager scm = Session["cart"] as ShoppingCartManager;
+
+        int itemNumber = int.Parse(Request.QueryString["item_num"].ToString());
+        
+        
+        decimal price = decimal.Parse(((
+            Label)DataList1.Controls[1].FindControl("UnitPriceLabel")).Text.Trim('P'));
+
+        scm.Insert(itemNumber, price, 1, "", "");
+
+        Response.Redirect(Request.UrlReferrer.ToString());
+    }
 }
