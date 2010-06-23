@@ -36,7 +36,9 @@ namespace GAOLS.DA
             }
             else
             {
-                (_cartTable.Rows[ItemIndex] as ManagerDS.ShoppingCartRow).Quantity += 1;
+                ManagerDS.ShoppingCartRow row = _cartTable.Rows[ItemIndex] as ManagerDS.ShoppingCartRow;
+                row.Quantity += 1;
+                row.SubTotal = row.Price * row.Quantity;
             }
             _lastUpdate = DateTime.Now;
         }
@@ -48,6 +50,7 @@ namespace GAOLS.DA
             Item.ItemNumber = ProductID;
             Item.Quantity = Quantity;
             Item.Price = Price;
+            Item.SubTotal = Price * Quantity;
             _lastUpdate = DateTime.Now;
         }
 

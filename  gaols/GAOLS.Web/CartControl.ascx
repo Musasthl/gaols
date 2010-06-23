@@ -24,15 +24,18 @@
         <%#DataBinder.Eval(Container.DataItem,"Description") %>
         <br>
         Price:
-        <asp:Label id="lblPrice" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Price") %>' />
+        <asp:Label id="lblPrice" runat="server" Text='<%# Eval("Price","P {0:n2}") %>' 
+            style="color: #FF0000" />
         <br>
         Quantity:
         <asp:Label id="lblQuantity" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Quantity")  %>' />
         <br>
         Subtotal:
-        <asp:Label id="lblSubTotal" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "SubTotal") %>' />
+        <asp:Label id="lblSubTotal" runat="server" 
+            Text='<%# Eval("SubTotal","P {0:n2}") %>' />
         <br />
         <asp:LinkButton ID="button1" runat="server" CommandName="edit" Text="Edit" />
+        &nbsp;&nbsp;
         <asp:LinkButton ID="LinkButton1" runat="server" CommandName="delete" Text="Remove" />
         <br>
         

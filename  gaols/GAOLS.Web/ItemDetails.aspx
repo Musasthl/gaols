@@ -9,24 +9,26 @@
         <ItemStyle BackColor="#EFF3FB" />
         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
         <HeaderTemplate>
-            <asp:Label ID="DescriptionLabel" runat="server" 
-                Text='<%# Eval("Description") %>' />
+            <asp:Label ID="Label1" runat="server" Text="Item Details"></asp:Label>
         </HeaderTemplate>
         <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <ItemTemplate>
             <table style="width:100%;">
                 <tr>
                     <td rowspan="2">
-                        <asp:ImageButton ID="ImageButton1" runat="server" Height="200px" 
+                        <asp:ImageButton ID="picture" runat="server" Height="200px" 
                             ImageUrl='<%# Eval("Picture") %>' Width="200px" />
                     </td>
-                    <td align="left" valign="top">
+                    <td align="left" valign="top" style="height: 5px" >
+                        <asp:Label ID="DescriptionLabel" runat="server" style="font-size: x-large" 
+                            Text='<%# Eval("Description") %>' />
+                        <br />
                         <asp:Label ID="UnitPriceLabel" runat="server" CssClass="style5" 
                             style="color: #FF0000" Text='<%# Eval("UnitPrice","P {0:n2}") %>' />
                     </td>
                 </tr>
                 <tr>
-                    <td align="left" valign="top">
+                    <td align="left" valign="top" style="height: 100px">
                         <asp:Label ID="DetailsLabel" runat="server" CssClass="style5" 
                             Text='<%# Eval("Details") %>' />
                     </td>
@@ -43,7 +45,7 @@
                 Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:LinkButton ID="btnAddToCart" runat="server">Add To Cart</asp:LinkButton>
+    <asp:LinkButton ID="btnAddToCart" runat="server" onclick="btnAddToCart_Click">Add To Cart</asp:LinkButton>
     </asp:Content>
 
 <asp:Content ID="Content3" runat="server" contentplaceholderid="head">
