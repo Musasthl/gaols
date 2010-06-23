@@ -1,8 +1,60 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="ItemDetails.aspx.cs" Inherits="Item" Title="Untitled Page" %>
-<%@ Register assembly="System.Web.DynamicData, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.DynamicData" tagprefix="cc1" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:DataList ID="DataList1" runat="server" CellPadding="4" 
+        DataKeyField="ItemNumber" DataSourceID="SqlDataSource1" ForeColor="#333333" 
+        RepeatColumns="1" Width="329px">
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <AlternatingItemStyle BackColor="White" />
+        <ItemStyle BackColor="#EFF3FB" />
+        <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        <HeaderTemplate>
+            <asp:Label ID="DescriptionLabel" runat="server" 
+                Text='<%# Eval("Description") %>' />
+        </HeaderTemplate>
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <ItemTemplate>
+            <table style="width:100%;">
+                <tr>
+                    <td rowspan="2">
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="200px" 
+                            ImageUrl='<%# Eval("Picture") %>' Width="200px" />
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="UnitPriceLabel" runat="server" CssClass="style5" 
+                            style="color: #FF0000" Text='<%# Eval("UnitPrice","P {0:n2}") %>' />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="DetailsLabel" runat="server" CssClass="style5" 
+                            Text='<%# Eval("Details") %>' />
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </ItemTemplate>
+    </asp:DataList>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString3 %>" 
+        SelectCommand="SELECT * FROM [Inventory] WHERE ([ItemNumber] = @ItemNumber)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="ItemNumber" QueryStringField="item_num" 
+                Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:LinkButton ID="btnAddToCart" runat="server">Add To Cart</asp:LinkButton>
     </asp:Content>
+
+<asp:Content ID="Content3" runat="server" contentplaceholderid="head">
+
+    <style type="text/css">
+        .style5
+        {
+            font-size: small;
+        }
+    </style>
+
+</asp:Content>
+
 

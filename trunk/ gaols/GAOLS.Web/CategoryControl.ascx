@@ -2,7 +2,7 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                 DataSourceID="SqlDataSource1" CellPadding="4" 
     ForeColor="#333333" Width="200px" 
-    DataKeyNames="CategoryId">
+    DataKeyNames="CategoryId" GridLines="None">
                 <RowStyle BackColor="#EFF3FB" />
                 <Columns>
                     <asp:BoundField DataField="CategoryId" HeaderText="CategoryId" ReadOnly="True" 
@@ -21,8 +21,8 @@
                 <AlternatingRowStyle BackColor="White" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
+                ConnectionString="Data Source=MIYANGOTPC\MSSQLSERVER2008;Initial Catalog=GAOLS;Integrated Security=True" 
                 SelectCommand="SELECT * FROM [Category]" 
     
-    ProviderName="<%$ ConnectionStrings:GAOLSConnectionString2.ProviderName %>"></asp:SqlDataSource>
+    ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
         
