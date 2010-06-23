@@ -46,11 +46,12 @@
     </ItemTemplate>
 </asp:DataList>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-    ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString %>" 
+    ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
     
     
         SelectCommand="SELECT [Picture], [Description], [Details], [UnitPrice], [Category] FROM [Inventory] WHERE ([Category] = @Category)" 
-        ProviderName="<%$ ConnectionStrings:GAOLSConnectionString.ProviderName %>">
+        
+        ProviderName="<%$ ConnectionStrings:GAOLSConnectionString2.ProviderName %>">
     <SelectParameters>
         <asp:QueryStringParameter Name="Category" QueryStringField="categ_id" 
             Type="String" />
