@@ -49,8 +49,8 @@ a {
 	position:absolute;
 	list-style: none;
         top: -7px;
-        left: -121px;
-        width: 638px;
+        left: -97px;
+        width: 614px;
     }
 /* rotator image style */	
 	div#rotator ul li img {
@@ -73,7 +73,7 @@ function theRotator() {
 	$('div#rotator ul li:first').css({opacity: 1.0});
 		
 	//rotate every after 3 seconds
-	setInterval('rotate()',2000);
+	setInterval('rotate()',3000);
 	
 }
 
@@ -104,32 +104,30 @@ $(document).ready(function() {
 
 
 <body>
-<div style="height: 118px; background-image: url('page_background.jpg');">
+<div style="height: 118px;padding:0; margin:0 10 0 0; background-image: url('page_background.jpg'); margin-top: -3px; margin-right: 20;">
 
 <center>
-<div id="rotator" style="left: -15px; top: 0px; width: 502px">
+<div id="rotator" style="left: 0px; top: 5px; width: 502px; margin-left:65px">
   <ul>
-    <li class="show"></li>
+    <li class="show" style="left: -97px; top: -7px; height: 109px"></li>
     
     
       <li><a href="#link1"><img src="images/webbanner11.jpg" width="600" height="100"  alt="pic1" /></a></li>
       <li><a href="#link2"><img src="images/webbanner3.jpg" width="600" height="100"  alt="pic2" /></a></li>
-      <li class="style6" style="left: -171px; top: -1px; width: 651px"><a href="#link3"><img src="images/webbanner7.jpg" width="600" height="100"  alt="pic3" /></a></li>
+      <li><a href="#link3"><img src="images/webbanner7.jpg" width="600" height="100"  alt="pic3" /></a></li>
       <li><a href="#link4"><img src="images/webbanner10.jpg" width="600" height="100"  alt="pic4" /></a></li>
       <li><a href="#link5"><img src="images/webbanner1.jpg" width="600" height="100"  alt="pic5" /></a></li>
     <li></li>
       <li><a href="#link6"><img src="images/webbanner5.jpg" width="600" height="100"  alt="pic6" class="style5" /></a></li></ul></div></center>
       
  </div>
+ 
       </body>
       </html>
 
 <style type="text/css">
                                                                                                                                                                                                                             .style5 {
 	margin-left: 0px;
-}
-.style6 {
-	margin-left: 37px;
 }
                                                                                                                                                                                                                             .style8 {
 			 	text-align: left;
@@ -147,17 +145,19 @@ $(document).ready(function() {
                                                                                                                                                                                                                         </style>
 
 <div "width:650px" class="style12">
-<div style="height:28px" class="style13"><asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" /> </div>
-<div style="width: 400px; float: right; padding:15px;background-image: url('images/submenu.jpg'); height: 15px;">
-            <div class="style8" style="font: normal normal bold medium serif; height: 28px; width: 382px">
+<div style="height:28px; margin-top: 1px;" class="style13"><br /><asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" /> </div>
+<div style="width: 410px; float: right; padding:15px;background-image: url('images/submenu.jpg'); height: 15px;">
+            <div class="style8" 
+                style="margin: 0px 0 0 0; font: normal normal bold medium serif; height: 26px; width: 395px; margin-top: -3px;">
             Category
-            <asp:DropDownList ID="DropDownList1" runat="server" 
+                :<asp:DropDownList ID="DropDownList1" runat="server" 
                 DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId" 
                     style="margin-bottom: 0px">
             </asp:DropDownList>
             
-            <asp:TextBox ID="TextBox1" runat="server" Width="80px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-				<asp:Button ID="Button1" runat="server" Text="Search" Width="95px" />
+            &nbsp;
+            
+            <asp:TextBox ID="TextBox1" runat="server" Width="80px"></asp:TextBox>&nbsp; &nbsp;<asp:Button ID="Button1" runat="server" Text="Search" Width="65px" />
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="style11" 
     
         
-        style="width: 343px; background-image: url('images/submenu.jpg');padding:0;margin:0; float: left; height: 39px;"><br/>
+        style="width: 333px; background-image: url('images/submenu.jpg');padding:0;margin:0 0 0 0; float: left; height: 39px; margin-top: -3px;"><br/>
             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
 			Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<asp:LinkButton ID="LinkButton2" runat="server" 
