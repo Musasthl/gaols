@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-        CellPadding="4" DataSourceID="ObjectDataSource1" ForeColor="#333333" 
+        CellPadding="4" ForeColor="#333333" 
         GridLines="None">
         <RowStyle BackColor="#EFF3FB" />
         <Columns>
@@ -13,8 +13,8 @@
             <asp:BoundField DataField="Quantity" HeaderText="Quantity" 
                 SortExpression="Quantity" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-            <asp:BoundField DataField="SubtTotal" HeaderText="SubtTotal" 
-                SortExpression="SubtTotal" />
+            <asp:BoundField DataField="SubTotal" HeaderText="SubTotal" 
+                SortExpression="SubTotal" />
         </Columns>
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <PagerTemplate>
@@ -29,8 +29,5 @@
         <EditRowStyle BackColor="#2461BF" />
         <AlternatingRowStyle BackColor="White" />
     </asp:GridView>
-    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" 
-        SelectMethod="GetCart" TypeName="GAOLS.DA.ShoppingCartManager">
-    </asp:ObjectDataSource>
-</asp:Content>
+    </asp:Content>
 

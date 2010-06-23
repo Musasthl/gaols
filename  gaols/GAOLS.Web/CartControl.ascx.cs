@@ -61,18 +61,15 @@ public partial class CartControl : System.Web.UI.UserControl
 
     protected void DataList1_UpdateCommand(object source, DataListCommandEventArgs e)
     {
-        Label itemLabel = e.Item.FindControl("lblDescription2") as System.Web.UI.WebControls.Label;
         TextBox qtyText = e.Item.FindControl("txtQuantity") as System.Web.UI.WebControls.TextBox;
         Label priceText = e.Item.FindControl("lblPrice") as System.Web.UI.WebControls.Label;
 
-        string item = itemLabel.Text;
         string qty = qtyText.Text;
         string price = priceText.Text;
 
 
         ManagerDS.ShoppingCartRow dr = CartView.Table.Rows[e.Item.ItemIndex] as ManagerDS.ShoppingCartRow;
         dr.Quantity = decimal.Parse(qty);
-        dr.Description = item;
         dr.Price = decimal.Parse(price);
         dr.SubTotal = dr.Price * dr.Quantity;
 

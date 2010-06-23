@@ -24,13 +24,12 @@ public partial class Item : System.Web.UI.Page
         ShoppingCartManager scm = Session["cart"] as ShoppingCartManager;
 
         int itemNumber = int.Parse(Request.QueryString["item_num"].ToString());
-        
-        
+        string description = ((Label)DataList1.Controls[1].FindControl("DescriptionLabel")).Text;
         decimal price = decimal.Parse(((
             Label)DataList1.Controls[1].FindControl("UnitPriceLabel")).Text.Trim('P'));
 
-        scm.Insert(itemNumber, price, 1, "", "");
+        scm.Insert(itemNumber, price, 1, description, "");
 
-        Response.Redirect(Request.UrlReferrer.ToString());
+        Response.Redirect(Page.Request.Url.ToString());
     }
 }

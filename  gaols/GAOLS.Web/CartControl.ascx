@@ -18,26 +18,50 @@
         <asp:Button ID="Button4" runat="server" Text="Check Out" Enabled="<%# EnableCheckOut() %>"/>
     </FooterTemplate>
     <ItemTemplate>
-        <asp:Image ID="Image1" runat="server" Height="79px" Width="85px" />
-        <br />
-        <asp:Label ID="lblDescription1" runat="server"></asp:Label>
-        <%#DataBinder.Eval(Container.DataItem,"Description") %>
+        <table style="width:100%;">
+            <tr>
+                <td rowspan="4">
+                    <asp:Image ID="Image1" runat="server" Height="79px" Width="85px" />
+                </td>
+                <td colspan="2">
+                    <asp:Label ID="lblDescription1" runat="server" style="font-size: large" 
+                        Text='<%# DataBinder.Eval(Container.DataItem, "Description") %>'></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Price:
+                </td>
+                <td>
+                    <asp:Label ID="lblPrice" runat="server" style="color: #0000FF" 
+                        Text='<%# Eval("Price","P {0:n2}") %>' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Quantity:
+                </td>
+                <td>
+                    <asp:Label ID="lblQuantity" runat="server" 
+                        Text='<%# DataBinder.Eval(Container.DataItem, "Quantity")  %>' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Subtotal:
+                </td>
+                <td>
+                    <asp:Label ID="lblSubTotal" runat="server" style="color: #FF0000" 
+                        Text='<%# Eval("SubTotal","P {0:n2}") %>' />
+                </td>
+            </tr>
+        </table>
         <br>
-        Price:
-        <asp:Label id="lblPrice" runat="server" Text='<%# Eval("Price","P {0:n2}") %>' 
-            style="color: #FF0000" />
-        <br>
-        Quantity:
-        <asp:Label id="lblQuantity" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Quantity")  %>' />
-        <br>
-        Subtotal:
-        <asp:Label id="lblSubTotal" runat="server" 
-            Text='<%# Eval("SubTotal","P {0:n2}") %>' />
-        <br />
         <asp:LinkButton ID="button1" runat="server" CommandName="edit" Text="Edit" />
         &nbsp;&nbsp;
-        <asp:LinkButton ID="LinkButton1" runat="server" CommandName="delete" Text="Remove" />
-        <br>
+        <asp:LinkButton ID="LinkButton1" runat="server" CommandName="delete" 
+            Text="Remove" />
+        <br></br>
         
         </ItemTemplate>
     <EditItemTemplate>

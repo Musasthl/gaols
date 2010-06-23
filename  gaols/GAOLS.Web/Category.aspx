@@ -6,7 +6,8 @@
     DataSourceID="SqlDataSource1" Font-Bold="False" Font-Italic="False" 
     Font-Overline="False" Font-Strikeout="False" Font-Underline="False" 
     ForeColor="#333333" HorizontalAlign="Center" RepeatColumns="3" 
-    RepeatDirection="Horizontal" Width="300px" GridLines="Both" ShowFooter="False">
+    RepeatDirection="Horizontal" Width="300px" GridLines="Both" ShowFooter="False" 
+        style="font-size: small">
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
             Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" />
@@ -23,7 +24,9 @@
             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
             Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Middle" />
     <HeaderTemplate>
-        <asp:Label ID="lblCategory" runat="server" Text='<%# GetCategoryName(Request.QueryString["name"]) %>'></asp:Label>
+        <asp:Label ID="lblCategory" runat="server" 
+            Text='<%# GetCategoryName(Request.QueryString["name"]) %>' 
+            style="font-size: small;"></asp:Label>
     </HeaderTemplate>
     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
@@ -36,7 +39,8 @@
             Text='<%# Eval("Description") %>' 
             PostBackUrl='<%# Eval("ItemNumber","ItemDetails.aspx?item_num={0}") %>'></asp:LinkButton>
         <br />
-        <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice","P {0:n2}") %>' />
+        <asp:Label ID="UnitPriceLabel" runat="server" 
+            Text='<%# Eval("UnitPrice","P {0:n2}") %>' style="color: #FF0000" />
         <br />
     </ItemTemplate>
 </asp:DataList>
