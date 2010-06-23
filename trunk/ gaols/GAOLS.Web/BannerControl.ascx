@@ -133,9 +133,8 @@ $(document).ready(function() {
                                                                                                                                                                                                                             }
     .style4
     {
-        width: 594px;
-                                                                                                                                                                                                                                height: 38px;
-                                                                                                                                                                                                                            }
+        height: 75px;
+    }
 .style5 {
 	margin-left: 0px;
 }
@@ -146,49 +145,21 @@ $(document).ready(function() {
 			 	text-align: left;
 			 	margin-top: 0px;
 			 }
-                                                                                                                                                                                                                            .style9 {
-	text-align: left;
-	font: normal normal bold medium serif;
-	margin-top: 0px;
-	margin-bottom: 5px;
-}
-.style11 {
+                                                                                                                                                                                                                            .style11 {
 	text-align: left;
 }
                                                                                                                                                                                                                          .style12 {
 	margin-bottom: 19px;
 }
-                                                                                                                                                                                                                         </style>
-<table class="style1" style="height: 141px">
-    
-    <tr>
-        <td colspan="1" class="style4" style="background-image: url('images/submenu.jpg'); width: 559px;">
-		&nbsp;</td>
-        <td align="right" style="background-image: url('images/submenu.jpg')">
-		<asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" />
-        </td>
-    </tr>
-    <tr>
-        <td align="left" style="background-image: url('images/submenu.jpg'); width: 559px;">
-            <br />
-        <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			&nbsp;</td>
-		<td align="right" class="style2" style="background-image: url('images/submenu.jpg')">
-			<br/>
-            
-            &nbsp;
-          
-        </td>
-    </tr>
-</table>
+ <asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" />                                                                                                                                                                                                                        </style>
+
 <div "width:650px" class="style12">
-<div style="width: 400px; float: right; padding:15px;background-image: url('images/submenu.jpg')">
-  <p class="style9" style="height: 18px">&nbsp;&nbsp; </p>
-            <div class="style8" style="height: 31px; width: 485px">
+<div style="width: 400px; float: right; padding:15px;background-image: url('images/submenu.jpg'); height: 8px;">
+            <div class="style8" style="height: 31px; width: 397px">
+            Category
             <asp:DropDownList ID="DropDownList1" runat="server" 
-                DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId">
+                DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId" 
+                    style="margin-bottom: 0px">
             </asp:DropDownList>
             
             <asp:TextBox ID="TextBox1" runat="server" Width="94px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -205,11 +176,13 @@ $(document).ready(function() {
 
 
 <div class="style11" 
-    style="width: 250px; background-image: url('images/submenu.jpg');padding:0;margin:0; float: left;"><br/>
+    
+        
+        style="width: 352px; background-image: url('images/submenu.jpg');padding:0;margin:0; float: left; height: 39px;"><br/>
             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
-			Home</asp:LinkButton>&nbsp;&nbsp; 
+			Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx" Font-Size="Medium" BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>
-	&nbsp; 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Signup.aspx" Font-Size="Medium" BorderStyle="Outset" Width="70px" CssClass="style10">Sign 
 			Up</asp:LinkButton></div>
 </div>
