@@ -39,7 +39,7 @@ public partial class Cart : System.Web.UI.Page
 
     void BindList()
     {
-        GridView1.DataSource = CartView;
-        GridView1.DataBind();
+        //GridView1.DataSource = CartView;
+        //GridView1.DataBind();
     }
 }
