@@ -12,13 +12,14 @@
         
         
  <style type="text/css">
-body {
-	margin:0;
-	padding:0;
+ body {
+	margin: 0;
+	padding: 0;
 	color: #4E3D4E;
 	font: normal 0.6em sans-serif, Arial;
 	background-color: #EDEDED;
 	width: 100%;
+	float: left;
 }
 h1 {
 	padding-left: 55px;
@@ -27,8 +28,9 @@ h1 {
 	letter-spacing:0.05em;
 }
 a {
-	outline: none;
-}
+ 	border: outset;
+ 	outline: none;
+ }
 </style>
 
 <style type="text/css">
@@ -120,7 +122,9 @@ $(document).ready(function() {
       
  </div>
       </body>
-      </html><style type="text/css">
+      </html>
+<div>a</div>
+<style type="text/css">
                                                                                                                                                                                                                             .style1
     {
         width: 100%;
@@ -138,40 +142,76 @@ $(document).ready(function() {
 .style6 {
 	margin-left: 37px;
 }
-                                                                                                                                                                                                                            </style>
+                                                                                                                                                                                                                            .style8 {
+			 	text-align: left;
+			 	margin-top: 0px;
+			 }
+                                                                                                                                                                                                                            .style9 {
+	text-align: left;
+	font: normal normal bold medium serif;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+.style11 {
+	text-align: left;
+}
+                                                                                                                                                                                                                         .style12 {
+	margin-bottom: 19px;
+}
+                                                                                                                                                                                                                         </style>
 <table class="style1" style="height: 141px">
     
     <tr>
-        <td colspan="1" class="style4" style="background-image: url('images/submenu.jpg')"></td>
+        <td colspan="1" class="style4" style="background-image: url('images/submenu.jpg'); width: 559px;">
+		&nbsp;</td>
         <td align="right" style="background-image: url('images/submenu.jpg')">
 		<asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" />
         </td>
     </tr>
     <tr>
-        <td align="left" style="background-image: url('images/submenu.jpg')">
+        <td align="left" style="background-image: url('images/submenu.jpg'); width: 559px;">
             <br />
         <br />
-            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
-			Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx" Font-Size="Medium" BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Cart.aspx" Font-Size="Medium" BorderStyle="Outset" Width="70px">Sign 
-			Up</asp:LinkButton>&nbsp;</td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			&nbsp;</td>
 		<td align="right" class="style2" style="background-image: url('images/submenu.jpg')">
-            <asp:Label ID="Label1" runat="server" Text="Category" BorderStyle="Solid" BorderWidth="1px" Font-Size="Medium"></asp:Label>
+			<br/>
+            
             &nbsp;
-            <asp:DropDownList ID="DropDownList1" runat="server" 
-                DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId">
-            </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString3 %>" 
-                SelectCommand="SELECT * FROM [Category]" 
-                
-                ProviderName="<%$ ConnectionStrings:GAOLSConnectionString3.ProviderName %>"></asp:SqlDataSource>
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Search" />
+          
         </td>
     </tr>
 </table>
-<p>
-    &nbsp;</p>
+<div "width:650px" class="style12">
+<div style="width: 400px; float: right; padding:15px;background-image: url('images/submenu.jpg')">
+  <p class="style9" style="height: 18px">&nbsp;&nbsp; </p>
+            <div class="style8" style="height: 31px; width: 485px">
+            <asp:DropDownList ID="DropDownList1" runat="server" 
+                DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId">
+            </asp:DropDownList>
+            
+            <asp:TextBox ID="TextBox1" runat="server" Width="94px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+				<asp:Button ID="Button1" runat="server" Text="Search" Width="176px" />
+            </div>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString3 %>" 
+                SelectCommand="SELECT [CategoryId], [Name] FROM [Category]" 
+                
+                ProviderName="<%$ ConnectionStrings:GAOLSConnectionString3.ProviderName %>"></asp:SqlDataSource>
+
+</div>
+
+
+<div class="style11" 
+    style="width: 250px; background-image: url('images/submenu.jpg');padding:0;margin:0; float: left;"><br/>
+            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
+			Home</asp:LinkButton>&nbsp;&nbsp; 
+			<asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx" Font-Size="Medium" BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>
+	&nbsp; 
+			<asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Signup.aspx" Font-Size="Medium" BorderStyle="Outset" Width="70px" CssClass="style10">Sign 
+			Up</asp:LinkButton></div>
+</div>
+
 
 
