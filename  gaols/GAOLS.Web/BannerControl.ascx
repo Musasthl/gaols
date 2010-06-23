@@ -192,13 +192,14 @@ $(document).ready(function() {
             </asp:DropDownList>
             
             <asp:TextBox ID="TextBox1" runat="server" Width="94px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-				<asp:Button ID="Button1" runat="server" Text="Search" Width="176px" />
+				<asp:Button ID="Button1" runat="server" Text="Search" Width="95px" />
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString3 %>" 
+                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
                 SelectCommand="SELECT [CategoryId], [Name] FROM [Category]" 
                 
-                ProviderName="<%$ ConnectionStrings:GAOLSConnectionString3.ProviderName %>"></asp:SqlDataSource>
+                
+        ProviderName="<%$ ConnectionStrings:GAOLSConnectionString3.ProviderName %>"></asp:SqlDataSource>
 
 </div>
 
