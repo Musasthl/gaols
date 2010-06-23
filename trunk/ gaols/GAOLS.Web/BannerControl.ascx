@@ -102,9 +102,10 @@ $(document).ready(function() {
 
 
 <body>
+<div style="height: 118px; background-image: url('page_background.jpg');">
 
 <center>
-<div id="rotator">
+<div id="rotator" style="left: -15px; top: 0px; width: 502px">
   <ul>
     <li class="show"></li>
     
@@ -115,7 +116,11 @@ $(document).ready(function() {
       <li><a href="#link4"><img src="images/webbanner10.jpg" width="600" height="100"  alt="pic4" /></a></li>
       <li><a href="#link5"><img src="images/webbanner1.jpg" width="600" height="100"  alt="pic5" /></a></li>
     <li></li>
-      <li><a href="#link6"><img src="images/webbanner5.jpg" width="600" height="100"  alt="pic6" class="style5" /></a></li></ul></div></center></body></html><style type="text/css">
+      <li><a href="#link6"><img src="images/webbanner5.jpg" width="600" height="100"  alt="pic6" class="style5" /></a></li></ul></div></center>
+      
+ </div>
+      </body>
+      </html><style type="text/css">
                                                                                                                                                                                                                             .style1
     {
         width: 100%;
@@ -133,22 +138,28 @@ $(document).ready(function() {
 .style6 {
 	margin-left: 37px;
 }
-                                                                                                                                                                                                                            .style7
-                                                                                                                                                                                                                            {
-                                                                                                                                                              }
-                                                                                                                                                                                                                        </style><table class="style1">
+                                                                                                                                                                                                                            </style>
+<table class="style1" style="height: 141px">
     
     <tr>
-        <td colspan="1" class="style4"></td>
-        <td align="right" class="style7"><asp:LoginStatus ID="LoginStatus1" runat="server" />
+        <td colspan="1" class="style4" style="background-image: url('images/submenu.jpg')"></td>
+        <td align="right" style="background-image: url('images/submenu.jpg')">
+		<asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" />
         </td>
     </tr>
     <tr>
-        <td align="left" class="style8">
+        <td align="left" style="background-image: url('images/submenu.jpg')">
             <br />
         <br />
-            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>&nbsp; <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx">Cart</asp:LinkButton></td><td align="right" class="style2">
-            <asp:Label ID="Label1" runat="server" Text="Category"></asp:Label><asp:DropDownList ID="DropDownList1" runat="server" 
+            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
+			Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx" Font-Size="Medium" BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Cart.aspx" Font-Size="Medium" BorderStyle="Outset" Width="70px">Sign 
+			Up</asp:LinkButton>&nbsp;</td>
+		<td align="right" class="style2" style="background-image: url('images/submenu.jpg')">
+            <asp:Label ID="Label1" runat="server" Text="Category" BorderStyle="Solid" BorderWidth="1px" Font-Size="Medium"></asp:Label>
+            &nbsp;
+            <asp:DropDownList ID="DropDownList1" runat="server" 
                 DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId">
             </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
