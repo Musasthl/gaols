@@ -181,10 +181,13 @@ $(document).ready(function() {
         style="width: 352px; background-image: url('images/submenu.jpg');padding:0;margin:0; float: left; height: 39px;"><br/>
             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
 			Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Cart.aspx" Font-Size="Medium" BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>
+			<asp:LinkButton ID="LinkButton2" runat="server" 
+        PostBackUrl="~/User_authenticated/Cart.aspx" Font-Size="Medium" 
+        BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Signup.aspx" Font-Size="Medium" BorderStyle="Outset" Width="70px" CssClass="style10">Sign 
-			Up</asp:LinkButton></div>
+			<asp:LinkButton ID="LinkButton3" runat="server" 
+        PostBackUrl="~/Register.aspx" Font-Size="Medium" BorderStyle="Outset" 
+        Width="70px" CssClass="style10">Register</asp:LinkButton></div>
 </div>
 
 
