@@ -30,8 +30,8 @@ a {
 	height:67px;
 	margin-left: 15px;
         top: 0px;
-        left: -11px;
-        width: 520px;
+        left: -15px;
+        width: 524px;
     }
 /* rotator css */
 	div#rotator ul li {
@@ -39,8 +39,8 @@ a {
 	position:absolute;
 	list-style: none;
         top: -1px;
-        left: 40px;
-        width: 477px;
+        left: -121px;
+        width: 638px;
     }
 /* rotator image style */	
 	div#rotator ul li img {
@@ -96,18 +96,22 @@ $(document).ready(function() {
 <body>
 
 <h1>Try ko Lang d2 my Error pa kasi sa home nakalagay datarowview error</h1>
-
+<center>
 <div id="rotator">
   <ul>
     <li class="show"></li>
-    <li><a href="#link2"><img src="images/Untitled-2 copy.jpg" width="468" height="60"  alt="pic2" /></a></li>
-    <li><a href="#link3"><img src="images/Untitled-3 copy.jpg" width="468" height="60"  alt="pic3" /></a></li>
     
-      <li><a href="#link1"><img src="images/Untitled-1 copy.jpg" width="468" 
-            height="60"  alt="pic1" /></a></li>
     
+      <li><a href="#link1"><img src="images/webbanner11.jpg" width="600" height="100"  alt="pic1" /></a></li>
+      <li><a href="#link2"><img src="images/webbanner3.jpg" width="600" height="100"  alt="pic2" /></a></li>
+      <li><a href="#link3"><img src="images/webbanner7.jpg" width="600" height="100"  alt="pic3" /></a></li>
+      <li><a href="#link4"><img src="images/webbanner10.jpg" width="600" height="100"  alt="pic4" /></a></li>
+      <li><a href="#link5"><img src="images/webbanner1.jpg" width="600" height="100"  alt="pic5" /></a></li>
+    <li></li>
+      <li><a href="#link6"><img src="images/webbanner5.jpg" width="600" height="100"  alt="pic6" /></a></li>
   </ul>
 </div>
+</center>
 
 </body>
 </html>
