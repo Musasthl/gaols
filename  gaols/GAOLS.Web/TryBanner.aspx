@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="App_Themes/Theme1/css/main.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
 <title>Di ko pa maaply sa Banner ascx may datarowveiw error pa.</title>
 <style type="text/css">
 body {
@@ -94,6 +96,7 @@ $(document).ready(function() {
 
 </head>
 <body>
+<div id="contactButton" style="left: 594px; top: 26px; width: 146px; height: 43px;" class="style1"><a title="about us">About Us</a><br /><a href="mailto:contact@groundswell.com" title="contact us">Contact Us</a></div>
 
 <h1>Try ko Lang d2 my Error pa kasi sa home nakalagay datarowview error</h1>
 <center>

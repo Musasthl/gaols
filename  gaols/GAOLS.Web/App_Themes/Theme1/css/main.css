@@ -1,7 +1,7 @@
-
+﻿
 body  {
 	font: 100% Verdana, Arial, Helvetica, sans-serif;
-	background: #bbb url(../_images/page_background.jpg);
+	background: #bbb url(../../page_background.jpg);
 	margin: 0;
 	padding: 0;
 	text-align: center;
