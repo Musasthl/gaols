@@ -32,26 +32,21 @@
     <ItemTemplate>
         <asp:Image ID="Image1" runat="server" Height="130px" Width="130px" />
         <br />
-        <asp:Label ID="DescriptionLabel" runat="server" 
-            Text='<%# Eval("Description") %>' />
+        <asp:LinkButton ID="DescriptionLabel" runat="server" 
+            Text='<%# Eval("Description") %>' 
+            PostBackUrl='<%# Eval("ItemNumber","ItemDetails.aspx?item_num={0}") %>'></asp:LinkButton>
         <br />
-        UnitPrice:
-        <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' />
-        <br />
-        <br />
-        <asp:LinkButton ID="LinkButton1" runat="server">View</asp:LinkButton>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:LinkButton ID="LinkButton2" runat="server">Add to Cart</asp:LinkButton>
+        <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice","P {0:n2}") %>' />
         <br />
     </ItemTemplate>
 </asp:DataList>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-    ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
+    ConnectionString="Data Source=MIYANGOTPC\MSSQLSERVER2008;Initial Catalog=GAOLS;Integrated Security=True" 
     
     
-        SelectCommand="SELECT [Picture], [Description], [Details], [UnitPrice], [Category] FROM [Inventory] WHERE ([Category] = @Category)" 
+        SelectCommand="SELECT ItemNumber, QuantityInStock, Description, UnitPrice, Details, Picture, Category FROM Inventory WHERE (Category = @Category)" 
         
-        ProviderName="<%$ ConnectionStrings:GAOLSConnectionString2.ProviderName %>">
+        ProviderName="System.Data.SqlClient">
     <SelectParameters>
         <asp:QueryStringParameter Name="Category" QueryStringField="categ_id" 
             Type="String" />
