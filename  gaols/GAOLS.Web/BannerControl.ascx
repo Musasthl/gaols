@@ -114,7 +114,7 @@ $(document).ready(function() {
     
       <li><a href="#link1"><img src="images/webbanner11.jpg" width="600" height="100"  alt="pic1" /></a></li>
       <li><a href="#link2"><img src="images/webbanner3.jpg" width="600" height="100"  alt="pic2" /></a></li>
-      <li class="style5" style="left: -106px; top: -1px; width: 623px"><a href="#link3"><img src="images/webbanner7.jpg" width="600" height="100"  alt="pic3" /></a></li>
+      <li class="style6" style="left: -171px; top: -1px; width: 651px"><a href="#link3"><img src="images/webbanner7.jpg" width="600" height="100"  alt="pic3" /></a></li>
       <li><a href="#link4"><img src="images/webbanner10.jpg" width="600" height="100"  alt="pic4" /></a></li>
       <li><a href="#link5"><img src="images/webbanner1.jpg" width="600" height="100"  alt="pic5" /></a></li>
     <li></li>
@@ -123,10 +123,13 @@ $(document).ready(function() {
  </div>
       </body>
       </html>
-<div>a</div>
+
 <style type="text/css">
                                                                                                                                                                                                                             .style5 {
 	margin-left: 0px;
+}
+.style6 {
+	margin-left: 37px;
 }
                                                                                                                                                                                                                             .style8 {
 			 	text-align: left;
@@ -138,18 +141,22 @@ $(document).ready(function() {
                                                                                                                                                                                                                          .style12 {
 	margin-bottom: 19px;
 }
- <asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" />                                                                                                                                                                                                                        </style>
+                                                                                                                                                                                                                        .style13 {
+	text-align: right;
+}
+                                                                                                                                                                                                                        </style>
 
 <div "width:650px" class="style12">
-<div style="width: 400px; float: right; padding:15px;background-image: url('images/submenu.jpg'); height: 8px;">
-            <div class="style8" style="font: normal normal bold medium serif; height: 31px; width: 397px">
+<div style="height:28px" class="style13"><asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" /> </div>
+<div style="width: 400px; float: right; padding:15px;background-image: url('images/submenu.jpg'); height: 15px;">
+            <div class="style8" style="font: normal normal bold medium serif; height: 28px; width: 382px">
             Category
             <asp:DropDownList ID="DropDownList1" runat="server" 
                 DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId" 
                     style="margin-bottom: 0px">
             </asp:DropDownList>
             
-            <asp:TextBox ID="TextBox1" runat="server" Width="94px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox1" runat="server" Width="80px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:Button ID="Button1" runat="server" Text="Search" Width="95px" />
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
@@ -165,13 +172,16 @@ $(document).ready(function() {
 <div class="style11" 
     
         
-        style="width: 352px; background-image: url('images/submenu.jpg');padding:0;margin:0; float: left; height: 39px;"><br/>
+        style="width: 343px; background-image: url('images/submenu.jpg');padding:0;margin:0; float: left; height: 39px;"><br/>
             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
 			Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/User_authenticated/Cart.aspx" Font-Size="Medium" BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>
+			<asp:LinkButton ID="LinkButton2" runat="server" 
+        PostBackUrl="~/User_authenticated/Cart.aspx" Font-Size="Medium" 
+        BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Register.aspx" Font-Size="Medium" BorderStyle="Outset" Width="70px" CssClass="style10">Sign 
-			Up</asp:LinkButton></div>
+			<asp:LinkButton ID="LinkButton3" runat="server" 
+        PostBackUrl="~/Register.aspx" Font-Size="Medium" BorderStyle="Outset" 
+        Width="70px" CssClass="style10">Register</asp:LinkButton></div>
 </div>
 
 
