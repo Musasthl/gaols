@@ -69,7 +69,7 @@
             </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
-                SelectCommand="SELECT [Name] FROM [Category]" 
+                SelectCommand="SELECT * FROM [Category]" 
                 ProviderName="<%$ ConnectionStrings:GAOLSConnectionString.ProviderName %>"></asp:SqlDataSource>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="Search" />
