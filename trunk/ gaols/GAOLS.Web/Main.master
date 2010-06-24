@@ -24,22 +24,22 @@
             
             style="border-style: groove; border-width: medium; height: 100%; width: 800px; background-color: #FFFFFF;">
             <tr>
-                <td colspan="3" align="center">
+                <td colspan="3" align="center" style="font-size: x-small">
                     <uc1:BannerControl ID="BannerControl1" runat="server" />
                 </td>
             </tr>
             <tr>
-                <td align="right" valign="top" width="100">
+                <td align="right" valign="top" width="100" style="font-size: small">
                     <uc3:CategoryControl ID="CategoryControl1" runat="server" />
                 </td>
-                <td valign="top" width="680" align="center">
+                <td valign="top" width="680" align="center" style="font-size: small">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
             <asp:LoginStatus ID="LoginStatus1" runat="server" />
         
         </asp:ContentPlaceHolder>
                 </td>
-                <td valign="top" align="left" width="100">
+                <td valign="top" align="left" width="100" style="font-size: medium">
                     <uc2:CartControl ID="CartControl1" runat="server" />
                 </td>
             </tr>
