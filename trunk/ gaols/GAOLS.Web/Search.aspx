@@ -54,7 +54,7 @@
         
         
         
-        ProviderName="<%$ ConnectionStrings:GAOLSConnectionString2.ProviderName %>">
+    ProviderName="<%$ ConnectionStrings:GAOLSConnectionString2.ProviderName %>">
         <SelectParameters>
             <asp:QueryStringParameter Name="Description" QueryStringField="desc" 
             Type="String" />

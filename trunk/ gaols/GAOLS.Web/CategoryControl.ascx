@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CategoryControl.ascx.cs" Inherits="CategoryControl" %>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
-                DataSourceID="SqlDataSource1" CellPadding="4">
+                DataSourceID="SqlDataSource1" CellPadding="4" Width="200px">
                 <RowStyle BackColor="#EFF3FB" />
                 <Columns>
                     <asp:BoundField DataField="CategoryId" HeaderText="CategoryId" 

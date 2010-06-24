@@ -89,4 +89,8 @@ public partial class CartControl : System.Web.UI.UserControl
     {
         return _enableCheckOut;
     }
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        Response.Redirect(@"~\User_authenticated\Cart.aspx");
+    }
 }
