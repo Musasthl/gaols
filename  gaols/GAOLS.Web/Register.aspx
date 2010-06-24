@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" 
-    ContinueDestinationPageUrl="~/LogIn.aspx" ActiveStepIndex="1" 
+    ContinueDestinationPageUrl="~/LogIn.aspx" 
         BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" 
         Font-Names="Verdana" Font-Size="0.8em" style="font-size: small">
         <SideBarStyle BackColor="#507CD1" Font-Size="0.9em" VerticalAlign="Top" />
@@ -118,8 +118,8 @@
                     </table>
                 </ContentTemplate>
             </asp:CreateUserWizardStep>
-            <asp:TemplatedWizardStep runat="server" Title="Type the image below">
-            </asp:TemplatedWizardStep>
+            <asp:WizardStep runat="server" StepType="Step">
+            </asp:WizardStep>
             <asp:CompleteWizardStep runat="server" >
                 <ContentTemplate>
                     <table border="0" style="font-family:Verdana;font-size:100%;">

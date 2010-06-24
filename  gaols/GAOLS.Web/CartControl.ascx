@@ -15,7 +15,8 @@
         Cart
     </HeaderTemplate>
     <FooterTemplate>
-        <asp:Button ID="Button4" runat="server" Text="Check Out" Enabled="<%# EnableCheckOut() %>"/>
+        <asp:Button ID="Button4" runat="server" Text="Check Out" 
+            Enabled="<%# EnableCheckOut() %>" onclick="Button4_Click" />
     </FooterTemplate>
     <ItemTemplate>
         <table style="width:100%;">

@@ -8,7 +8,8 @@
             <td>
                 &nbsp;</td>
             <td>
-                &nbsp;</td>
+                <asp:Label ID="Label1" runat="server" Text="Your Cart"></asp:Label>
+            </td>
             <td>
                 &nbsp;</td>
         </tr>
@@ -25,9 +26,10 @@
                 SortExpression="Description" />
                         <asp:BoundField DataField="Quantity" HeaderText="Quantity" 
                 SortExpression="Quantity" />
-                        <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+                        <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" 
+                            DataFormatString="&quot;P {0:n2}&quot;" />
                         <asp:BoundField DataField="SubTotal" HeaderText="SubTotal" 
-                SortExpression="SubTotal" />
+                SortExpression="SubTotal" DataFormatString="&quot;P {0:n2}&quot;" />
                     </Columns>
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <PagerTemplate>
@@ -50,7 +52,9 @@
             <td>
                 &nbsp;</td>
             <td>
-                &nbsp;</td>
+                <br />
+                <asp:Button ID="Button1" runat="server" Text="Check Out" />
+            </td>
             <td>
                 &nbsp;</td>
         </tr>
