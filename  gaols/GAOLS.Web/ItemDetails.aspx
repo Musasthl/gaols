@@ -38,8 +38,10 @@
         </ItemTemplate>
     </asp:DataList>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString3 %>" 
-        SelectCommand="SELECT * FROM [Inventory] WHERE ([ItemNumber] = @ItemNumber)">
+        ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
+        
+    SelectCommand="SELECT * FROM [Inventory] WHERE ([ItemNumber] = @ItemNumber)" 
+    ProviderName="<%$ ConnectionStrings:GAOLSConnectionString2.ProviderName %>">
         <SelectParameters>
             <asp:QueryStringParameter Name="ItemNumber" QueryStringField="item_num" 
                 Type="Int32" />

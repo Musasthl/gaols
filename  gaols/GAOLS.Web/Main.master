@@ -35,6 +35,8 @@
                 <td valign="top" width="680" align="center">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
+            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+        
         </asp:ContentPlaceHolder>
                 </td>
                 <td valign="top" align="left" width="100">
