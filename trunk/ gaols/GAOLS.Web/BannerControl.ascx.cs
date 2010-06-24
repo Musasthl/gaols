@@ -17,4 +17,9 @@ public partial class BannerControl : System.Web.UI.UserControl
     {
 
     }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect(string.Format(@"~\Search.aspx?categ_id={0}&categ_name={1}&desc={2}",
+            DropDownList1.SelectedValue, DropDownList1.SelectedItem.Text, TextBox1.Text));
+    }
 }

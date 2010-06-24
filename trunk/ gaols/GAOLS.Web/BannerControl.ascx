@@ -157,7 +157,9 @@ $(document).ready(function() {
             
             &nbsp;
             
-            <asp:TextBox ID="TextBox1" runat="server" Width="80px"></asp:TextBox>&nbsp; &nbsp;<asp:Button ID="Button1" runat="server" Text="Search" Width="65px" />
+            <asp:TextBox ID="TextBox1" runat="server" Width="80px"></asp:TextBox>&nbsp; &nbsp;<asp:Button 
+                    ID="Button1" runat="server" Text="Search" Width="65px" 
+                    onclick="Button1_Click" />
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
@@ -181,7 +183,7 @@ $(document).ready(function() {
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<asp:LinkButton ID="LinkButton3" runat="server" 
         PostBackUrl="~/Register.aspx" Font-Size="Medium" BorderStyle="Outset" 
-        Width="70px" CssClass="style10">Register</asp:LinkButton></div>
+        Width="70px">Register</asp:LinkButton></div>
 </div>
 
 
