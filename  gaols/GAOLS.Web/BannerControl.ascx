@@ -145,21 +145,24 @@ $(document).ready(function() {
                                                                                                                                                                                                                         </style>
 
 <div "width:650px" class="style12">
-<div style="height:28px; margin-top: 1px;" class="style13"><br /><asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" /> </div>
-<div style="width: 410px; float: right; padding:15px;background-image: url('images/submenu.jpg'); height: 15px;">
+<div style="height:28px; margin-top: 1px; background-color: #800000;" 
+        class="style13" id="loginDiv"><br /><asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Medium" /> </div>
+<div style="width: 410px; float: right; padding:15px;background-image: url('images/submenu.jpg'); height: 14px;">
             <div class="style8" 
-                style="margin: 0px 0 0 0; font: normal normal bold medium serif; height: 26px; width: 395px; margin-top: -3px;">
+                
+                style="font: normal normal bold medium serif; margin-top:-1;height: 26px; width: 414px; margin-top: -3px; margin-left: 0; margin-right: 0; margin-bottom: 0;">
             Category
-                :<asp:DropDownList ID="DropDownList1" runat="server" 
+                : <asp:DropDownList ID="DropDownList1" runat="server" 
                 DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CategoryId" 
                     style="margin-bottom: 0px">
             </asp:DropDownList>
             
             &nbsp;
             
-            <asp:TextBox ID="TextBox1" runat="server" Width="80px"></asp:TextBox>&nbsp; &nbsp;<asp:Button 
-                    ID="Button1" runat="server" Text="Search" Width="65px" 
-                    onclick="Button1_Click" />
+            <asp:TextBox ID="TextBox1" runat="server" Width="83px"></asp:TextBox>
+                <asp:Button 
+                    ID="Button1" runat="server" Text="Search" Width="75px" 
+                    onclick="Button1_Click" Height="26px" />
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
@@ -174,7 +177,8 @@ $(document).ready(function() {
 <div class="style11" 
     
         
-        style="width: 333px; background-image: url('images/submenu.jpg');padding:0;margin:0 0 0 0; float: left; height: 39px; margin-top: -3px;"><br/>
+        
+        style="width: 345px; background-image: url('images/submenu.jpg');padding:0;float: left; height: 45px; margin-top: -1px; margin-left: 0; margin-right: 0; margin-bottom: 0;"><br/>
             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
 			Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<asp:LinkButton ID="LinkButton2" runat="server" 
