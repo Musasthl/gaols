@@ -28,7 +28,7 @@ h1 {
 	letter-spacing:0.05em;
 }
 a {
- 	border: outset;
+ 	
  	outline: none;
  }
 </style>
@@ -165,7 +165,7 @@ $(document).ready(function() {
                     onclick="Button1_Click" Height="26px" />
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString2 %>" 
+                ConnectionString="<%$ ConnectionStrings:GAOLSConnectionString3 %>" 
                 SelectCommand="SELECT [CategoryId], [Name] FROM [Category]" 
                 
                 
@@ -179,14 +179,14 @@ $(document).ready(function() {
         
         
         style="width: 345px; background-image: url('images/submenu.jpg');padding:0;float: left; height: 45px; margin-top: -1px; margin-left: 0; margin-right: 0; margin-bottom: 0;"><br/>
-            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="Outset" Width="76px"> 
+            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx" Font-Size="Medium" BorderStyle="None" Width="76px"> 
 			Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<asp:LinkButton ID="LinkButton2" runat="server" 
         PostBackUrl="~/User_authenticated/Cart.aspx" Font-Size="Medium" 
-        BorderStyle="Outset" Width="52px">Cart</asp:LinkButton>
+        BorderStyle="None" Width="52px">Cart</asp:LinkButton>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<asp:LinkButton ID="LinkButton3" runat="server" 
-        PostBackUrl="~/Register.aspx" Font-Size="Medium" BorderStyle="Outset" 
+        PostBackUrl="~/Register.aspx" Font-Size="Medium" BorderStyle="None" 
         Width="70px">Register</asp:LinkButton></div>
 </div>
 
